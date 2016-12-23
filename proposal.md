@@ -13,7 +13,7 @@ Da sehr viele Daten gefragt sind, ist es notwendig, die Applikation auf mehrere 
 Erreicht der Benutzer das Ende des Formulars, so erscheint eine Übersicht über die eingegebenen Daten. Nachdem er diese auf Korrektheit überprüft hat, kann der Meldezettel entweder endgültig abgespeichert, korrigiert oder doch noch verworfen werden. 
 
 
-*Der grafische Prototyp des Projektes kann unter dem Link https://github.com/FlorianReinprecht/resifo-android/blob/master/Prototype.pdf/ abgerufen werden.* 
+*Der grafische Prototyp des Projektes kann unter dem Link https://github.com/FlorianReinprecht/resifo-android/blob/master/prototype.pdf/ abgerufen werden.* 
 
 ## Zeit- und Kostenrechnung
 
