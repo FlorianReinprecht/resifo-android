@@ -1,0 +1,5 @@
+1. Max. 50 characters in subject line
+2. Begin all subject lines with a capital letter
+3. No period (".") at the end of the subject line
+4. Use imperative in the subject line (a commit message completes this sentence: "If applied, this commit will <commit message>")
+5. Manually create a new line after 72 characters in the extended message
