@@ -1,23 +1,37 @@
 #Einteilung des Projekt-Teams
 
-##Arbeitsaufteilung 
+##Einleitung
 
 Diese Arbeitseinteilung ist eine grobe Beschreibung der Zuständigkeiten der einzelnen Mitglieder. Eine genauere Beschreibung der einzelnen Tätigkeiten finden Sie im Proposal.
 
 Im Laufe des Projektes werden alle weiteren Tätigkeiten in dieser Datei und in der Timetable.csv mitgeschrieben und dokumentiert.
 
 Arbeitseinteilung vom  **23.12.2016**.
-#Rollen der einzelnen Mitglieder:
+
+## Team-Mitglieder:
 
 ### Agnesa Haxha
-* Zeichnung des Prototyps 
-* Dokumentation
 
 ### Andreas Krejan
-* Programmierung
 
 ### Dominik Krüger
-* Design
 
 ### Florian Reinprecht
-* Projektleiter
+
+## Rollen der einzelnen Mitglieder:
+
+### Design
+* Dominik Krüger
+
+### Dokumentation
+* Agnesa Haxha
+
+### Programmierung
+* Andreas Krejan
+
+### Projektleiter
+* Florian Reinprecht
+
+## Tätigkeiten der Mitglieder: (für Details siehe Timetable.csv)
+
+
