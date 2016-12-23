@@ -26,9 +26,9 @@ Erreicht der Benutzer das Ende des Formulars, so erscheint eine Übersicht über
 |                                | Reinprecht Florian | 3           | € 35,- | € 105,-   |
 | **Design**                         |                    |             |        | € 700,-   |
 |                                | Haxha Agnesa       | 10          | € 35,- | € 350,-   |
-|                                | Krüger Dominik     | 10          | € 35,- | € 350,-   |
-| **Modellierung**                   |                    |             |        | € 700,-   |
 |                                | Krejan Andreas     | 10          | € 35,- | € 350,-   |
+| **Modellierung**                   |                    |             |        | € 700,-   |
+|                                | Krüger Dominik     | 10          | € 35,- | € 350,-   |
 |                                | Reinprecht Florian | 10          | € 35,- | € 350,-   |
 | **Meetings**                       |                    |             |        | € 560,-   |
 |                                | Haxha Agnesa       | 4           | € 35,- | € 140,-   |
