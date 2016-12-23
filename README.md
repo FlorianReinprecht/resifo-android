@@ -7,3 +7,4 @@ Dieses Applikation wurde im Rahmen eines Studienprojekts an der FH Joanneum entw
 ## Beschreibung
 
 ## Lizenz
+GNU GPLv3 Lizenz (siehe LICENSE.txt)
