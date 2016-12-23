@@ -1,12 +1,8 @@
 # Einteilung des Projekt-Teams
 
-## Einleitung
+Diese Arbeitseinteilung ist eine grobe Beschreibung der Zuständigkeiten der einzelnen Mitglieder. Eine genauere Beschreibung der einzelnen Tätigkeiten ist in der [proposal.md](https://github.com/FlorianReinprecht/resifo-android/blob/master/proposal.md) zu finden.
 
-Diese Arbeitseinteilung ist eine grobe Beschreibung der Zuständigkeiten der einzelnen Mitglieder. Eine genauere Beschreibung der einzelnen Tätigkeiten finden Sie im Proposal.
-
-Im Laufe des Projektes werden alle weiteren Tätigkeiten in dieser Datei und in der Timetable.csv mitgeschrieben und dokumentiert.
-
-Arbeitseinteilung vom  **23.12.2016**.
+# Arbeitseinteilung vom  **23.12.2016**.
 
 ## Team-Mitglieder
 * Agnesa Haxha
@@ -36,6 +32,4 @@ Arbeitseinteilung vom  **23.12.2016**.
 ### Projektleiter
 * Florian Reinprecht
 
-## Tätigkeiten der Mitglieder: (für Details siehe Timetable.csv)
-
-
+*Eine Aufstellung der bisherigen Tätigkeiten gibt es im [Timesheet](https://github.com/FlorianReinprecht/resifo-android/blob/master/timesheet.csv).*
