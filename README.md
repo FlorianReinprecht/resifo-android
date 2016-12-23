@@ -7,7 +7,7 @@ Dieses Applikation wurde im Rahmen eines Studienprojekts an der FH Joanneum entw
 ## Beschreibung
 
 ## Voraussetzungen:
-Die App wurde mit Android Studio 2.2.3 und Gradle in der Programmiersprace Scala erstellt. Zur Bearbeitung wird das gradle-android-scala-plugin benötigt. (https://github.com/rladstaetter/gradle-android-scala-plugin)
+Die App wurde mit Android Studio 2.2.3 und Gradle in der Programmiersprache Scala erstellt. Zur Bearbeitung wird das gradle-android-scala-plugin benötigt. (https://github.com/rladstaetter/gradle-android-scala-plugin)
 
 ## Lizenz
 GNU GPLv3 Lizenz (siehe LICENSE.txt)
