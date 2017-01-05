@@ -15,6 +15,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SelectActivity" />
+        <activity android:name=".ShowActivity" />
+        <activity android:name=".EditActivity" />
+        <activity android:name=".EditPersonActivity" />
+        <activity android:name=".Formular01Activity" />
+        <activity android:name=".Formular02Activity" />
+        <activity android:name=".Formular03Activity" />
+        <activity android:name=".Formular04Activity"></activity>
     </application>
 
 </manifest>
