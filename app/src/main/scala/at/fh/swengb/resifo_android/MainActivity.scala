@@ -10,6 +10,8 @@ class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
   }
+  println(RegForm("Herr", "Florian", "Reinprecht"))
+
 
   def gotoFirstActivity(view: View):Unit = {
     val i = new Intent(this, classOf[SelectActivity])
