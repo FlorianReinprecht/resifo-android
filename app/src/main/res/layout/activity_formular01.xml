@@ -10,95 +10,127 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="at.fh.swengb.resifo_android.Formular01Activity">
 
-    <TextView
-        android:text="Anrede:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:id="@+id/textView_anrede"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:text="Familienname:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView_anrede"
-        android:layout_marginTop="29dp"
-        android:id="@+id/textView_familienname" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:layout_alignBaseline="@+id/textView_anrede"
+            android:layout_alignBottom="@+id/textView_anrede"
+            android:layout_alignParentStart="true"
+            android:hint="Anrede" />
 
-    <TextView
-        android:text="Vorname:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView_familienname"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="24dp"
-        android:id="@+id/textView_vorname" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:layout_below="@+id/editText"
+            android:layout_alignEnd="@+id/editText"
+            android:id="@+id/editText2"
+            android:hint="Familienname" />
 
-    <TextView
-        android:text="Geburtsdatum:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView_vorname"
-        android:layout_marginTop="33dp"
-        android:id="@+id/textView_geburtsdatum" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:layout_below="@+id/editText2"
+            android:layout_alignParentStart="true"
+            android:id="@+id/editText3"
+            android:hint="Vorname" />
+    </LinearLayout>
 
-    <TextView
-        android:text="Geburtsort:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView_geburtsdatum"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="27dp"
-        android:id="@+id/textView_geburtsort" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:text="Familienstand"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView_geburtsort"
-        android:layout_marginTop="53dp"
-        android:id="@+id/textView_familienstand" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="10"
+            android:layout_below="@+id/editText3"
+            android:layout_alignParentStart="true"
+            android:id="@+id/editText4"
+            android:hint="Geburtsdatum" />
 
-    <TextView
-        android:text="Staatsangehörigkeit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
-        android:id="@+id/textView_staatsangehörigkeit"
-        android:layout_below="@+id/textView_familienstand"
-        android:layout_alignParentStart="true" />
+        <DatePicker
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/datePicker" />
+    </LinearLayout>
 
-    <ProgressBar
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:id="@+id/progressBar2"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:visibility="visible"
-        android:max="100"
-        android:progress="10"
-        android:indeterminate="false" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <Button
-        android:text="<<   Zurück"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_zurueck"
-        android:layout_above="@+id/progressBar2"
-        android:layout_alignParentStart="true" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:layout_below="@+id/editText4"
+            android:layout_alignParentStart="true"
+            android:id="@+id/editText5"
+            android:hint="Geburtsort" />
 
-    <Button
-        android:text="Weiter   >>"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_weiter"
-        android:layout_above="@+id/progressBar2"
-        android:layout_alignParentEnd="true" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:layout_below="@+id/editText5"
+            android:layout_alignParentStart="true"
+            android:id="@+id/editText6"
+            android:hint="Familienstand" />
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:layout_below="@+id/editText6"
+            android:layout_alignParentStart="true"
+            android:id="@+id/editText7"
+            android:hint="Staatsangehörigkeit" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/progressBar2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:visibility="visible"
+            android:max="100"
+            android:progress="1"
+            android:indeterminate="false" />
+
+        <Button
+            android:text="Weiter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_weiter"
+            android:layout_above="@+id/progressBar2"
+            android:layout_alignParentEnd="true"
+            android:onClick="getNext" />
+    </LinearLayout>
 
 
 </RelativeLayout>

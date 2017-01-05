@@ -12,7 +12,7 @@
 
 
     <TextView
-        android:text="Geben Sie bitte hier Ihre zwölfstellige ZMR-Zahl ein"
+        android:text="Geben Sie bitte Ihre zwölfstellige ZMR-Zahl ein"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="96dp"
@@ -22,20 +22,22 @@
         android:layout_alignParentStart="true" />
 
     <Button
-        android:text="<<   Zurück"
+        android:text="Zurück"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button_zurueck"
         android:layout_above="@+id/progressBar2"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:onClick="getPrev" />
 
     <Button
-        android:text="Weiter   >>"
+        android:text="Weiter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button_weiter"
         android:layout_above="@+id/progressBar2"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:onClick="getNext" />
 
     <ProgressBar
         style="?android:attr/progressBarStyleHorizontal"
@@ -47,7 +49,7 @@
         android:layout_alignParentStart="true"
         android:visibility="visible"
         android:max="100"
-        android:progress="20"
+        android:progress="10"
         android:indeterminate="false" />
 
 </RelativeLayout>

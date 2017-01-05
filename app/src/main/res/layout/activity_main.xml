@@ -42,6 +42,16 @@
         android:id="@+id/progressBar2"
         android:layout_alignParentEnd="true"
         android:max="100"
-        android:progress="0" />
+        android:progress="100" />
+
+    <Button
+        android:text="Let's go!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="109dp"
+        android:id="@+id/button_go"
+        android:layout_below="@+id/textView_selectLanguage"
+        android:layout_centerHorizontal="true"
+        android:onClick="gotoFirstActivity" />
 
 </RelativeLayout>

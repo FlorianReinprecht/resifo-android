@@ -11,7 +11,7 @@
     tools:context="at.fh.swengb.resifo_android.EditPersonActivity">
 
     <Button
-        android:text="Bearbeiten >>"
+        android:text="Bearbeiten"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

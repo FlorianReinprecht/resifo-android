@@ -20,7 +20,8 @@
         android:textSize="24sp"
         android:maxWidth="60dip"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="NewForm" />
 
     <Button
         android:text="bearbeiten"
@@ -32,7 +33,8 @@
         android:textSize="24sp"
         android:maxWidth="60dip"
         android:layout_below="@+id/button_neu"
-        android:layout_alignStart="@+id/button_neu" />
+        android:layout_alignStart="@+id/button_neu"
+        android:onClick="EditForm" />
 
     <Button
         android:text="wichtige information"
@@ -43,6 +45,7 @@
         android:textSize="24sp"
         android:maxWidth="60dip"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:onClick="getInfo" />
 
 </RelativeLayout>
