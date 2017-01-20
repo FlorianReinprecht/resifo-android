@@ -15,15 +15,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SelectActivity"></activity>
-        <activity android:name=".EditActivity"></activity>
-        <activity android:name=".EditPersonActivity"></activity>
-        <activity android:name=".Formular01Activity"></activity>
-        <activity android:name=".Formular02Activity"></activity>
-        <activity android:name=".Formular03Activity"></activity>
-        <activity android:name=".Formular04Activity"></activity>
-        <activity android:name=".Formular05Activity"></activity>
-        <activity android:name=".InformationActivity"></activity>
+        <activity android:name=".SelectActivity" />
+        <activity android:name=".EditActivity" />
+        <activity android:name=".EditPersonActivity" />
+        <activity android:name=".Formular01Activity" />
+        <activity android:name=".Formular02Activity" />
+        <activity android:name=".Formular03Activity" />
+        <activity android:name=".Formular04Activity" />
+        <activity android:name=".Formular05Activity" />
+        <activity android:name=".InformationActivity" />
+        <activity android:name=".Formular06Activity" />
+        <activity android:name=".Formular07Activity" />
+        <activity android:name=".Formular08Activity" />
+        <activity android:name=".Formular09Activity" />
+        <activity android:name=".Formular10Activity" />
+        <activity android:name=".Formular11Activity" />
+        <activity android:name=".Formular12Activity"></activity>
     </application>
 
 </manifest>
