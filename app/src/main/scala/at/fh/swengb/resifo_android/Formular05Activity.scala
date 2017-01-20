@@ -15,9 +15,14 @@ class Formular05Activity extends AppCompatActivity {
     val prevView = new Intent(this, classOf[Formular04Activity])
     startActivity(prevView)
   }
-/*
-  def getNext(view: View):Unit = {
+
+  def hwsYes(view: View):Unit = {
     val nextView = new Intent(this, classOf[Formular06Activity])
     startActivity(nextView)
-  }*/
+  }
+
+  def hwsNo (view: View):Unit = {
+    val nextView = new Intent(this, classOf[Formular08Activity])
+    startActivity(nextView)
+  }
 }

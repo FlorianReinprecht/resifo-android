@@ -1,33 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_formular03"
+    android:id="@+id/activity_formular12"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="at.fh.swengb.resifo_android.Formular03Activity">
-
-
-    <Button
-        android:text="Zurück"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_zurueck"
-        android:layout_above="@+id/progressBar"
-        android:layout_alignParentStart="true"
-        android:onClick="getPrev" />
-
-    <Button
-        android:text="Weiter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_weiter"
-        android:layout_above="@+id/progressBar"
-        android:layout_alignParentEnd="true"
-        android:onClick="getNext" />
+    tools:context="at.fh.swengb.resifo_android.Formular12Activity">
 
     <ProgressBar
         style="?android:attr/progressBarStyleHorizontal"
@@ -39,18 +20,28 @@
         android:layout_alignParentStart="true"
         android:visibility="visible"
         android:max="100"
-        android:progress="12"
+        android:progress="100"
         android:indeterminate="false" />
 
     <TextView
-        android:text="Geben Sie bitte Ihre zwölfstellige ZMR-Zahl ein:"
+        android:text="Ihre Daten wurden erfolgreich gespeichert!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:textSize="24sp"
+        android:layout_marginTop="140dp"
+        android:textSize="30sp"
         android:textAlignment="center"
-        android:id="@+id/textView_zmr"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView" />
+
+    <Button
+        android:text="Zurück zur Startseite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_startseite"
+        android:onClick="goBack"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp" />
 
 </RelativeLayout>
