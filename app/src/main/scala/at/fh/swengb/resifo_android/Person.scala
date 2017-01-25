@@ -1,4 +1,5 @@
 package at.fh.swengb.resifo_android
 
 
-case class Person(firstName: String, secondName: String)
+case class Person(anrede: String,firstName: String, secondName: String,gebDatum:String, gebOrt:String, famStand: String,
+                  staat: String)

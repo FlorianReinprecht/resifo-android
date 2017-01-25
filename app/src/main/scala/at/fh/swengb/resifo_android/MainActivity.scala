@@ -10,7 +10,7 @@ class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
   }
-  println(RegForm("Herr", "Florian", "Reinprecht"))
+  println(RegForm(Person("Herr", "Florian", "Reinprecht","10.12.1994","Feldbach","ledig","Österreich")))
 
 
   def gotoFirstActivity(view: View):Unit = {

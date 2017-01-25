@@ -24,39 +24,45 @@ case class ResDb(context: Context) extends SQLiteOpenHelper(context, ResDb.Name,
   override def onCreate(db: SQLiteDatabase): Unit = {
 
     // perform initial setup
-    val personTable = PersonTable(db)
+    val personTable = RegFormTable(db)
 
     personTable.init()
 
   }
 
-  def mkPersonTable(): PersonTable = PersonTable(getWritableDatabase)
+  def mkRegFormTable(): RegFormTable = RegFormTable(getWritableDatabase)
 
   /**
     * Hides details of database table 'Person'
     *
     * @param db
     */
-  case class PersonTable(db: SQLiteDatabase) {
+  case class RegFormTable(db: SQLiteDatabase) {
 
-    def init(): Unit = db.execSQL("create table person (id INTEGER PRIMARY KEY ASC, firstname TEXT, secondname TEXT);")
+    def init(): Unit = db.execSQL("create table regForm " +
+      "(id INTEGER PRIMARY KEY ASC, anrede TEXT, firstname TEXT, secondname TEXT, gebDatum TEXT, gebOrt TEXT, famstand TEXT, staat TEXT, zmr INTEGER," +
+      "art TEXT, ausstDatum TEXT, auszuBHD TEXT, an_strasse TEXT,an_hausNr TEXT, an_stiege TEXT, an_tuerNr TEXT," +
+      "an_plz TEXT, an_ort TEXT, an_hauptWS INTEGER, ab_strasse TEXT, ab_hausNr TEXT, ab_stiege TEXT, ab_tuerNr TEXT," +
+      "ab_plz TEXT, ab_ort TEXT, ausland INTEGER, korrekt INTEGER,unter_name STRING,unter_datum TEXT);")
+
+
 
     /**
       * Insert a person to the database.
       *
-      * @param p
+      * @param r
       */
-    def insert(p: Person): Unit = {
-      val cv: ContentValues = mkContentValues(p)
-      db.insert("person", null, cv)
+    def insert(r: RegForm): Unit = {
+      val cv: ContentValues = mkContentValues(r)
+      db.insert("regForm", null, cv)
     }
 
     def deleteByFirstName(firstName : String) : Unit = {
-      db.delete("person", "firstname = ?", Array(firstName))
+      db.delete("regForm", "firstname = ?", Array(firstName))
     }
 
-    def update(p : Person) : Unit = {
-      db.update("person", mkContentValues(p), "firstname = ? and secondname = ?", Array(p.firstName,p.secondName))
+    def update(r : RegForm) : Unit = {
+      db.update("regForm", mkContentValues(r), "firstname = ? and secondname = ?", Array(r.person.firstName,r.person.secondName))
     }
 
     /**
@@ -65,7 +71,7 @@ case class ResDb(context: Context) extends SQLiteOpenHelper(context, ResDb.Name,
       * @param firstName the firstName to search for
       * @return
       */
-    def listByFirstName(firstName: String): List[Person] = {
+    def listByFirstName(firstName: String): List[RegForm] = {
       var someCursor: Option[Cursor] = None
       try {
         someCursor = someCursorForFirstnameQuery(firstName)
@@ -74,12 +80,17 @@ case class ResDb(context: Context) extends SQLiteOpenHelper(context, ResDb.Name,
             System.err.println("Could not execute query due to some reason")
             Nil
           case Some(c) =>
-            val lb = new ListBuffer[Person]()
+            val lb = new ListBuffer[RegForm]()
             while (c.moveToNext()) {
               val id = c.getInt(c.getColumnIndex("id"))
+              val anrede = c.getString(c.getColumnIndex("anrede"))
               val firstName = c.getString(c.getColumnIndex("firstname"))
               val secondName = c.getString(c.getColumnIndex("secondname"))
-              lb.append(Person(firstName, secondName))
+              val gebDatum = c.getString(c.getColumnIndex("gebDatum"))
+              val gebOrt = c.getString(c.getColumnIndex("gebOrt"))
+              val famStand = c.getString(c.getColumnIndex("famstand"))
+              val staat = c.getString(c.getColumnIndex("staat"))
+              lb.append(RegForm(Person(anrede, firstName, secondName, gebDatum, gebOrt, famStand, staat)))
             }
             lb.toList
         }
@@ -96,20 +107,26 @@ case class ResDb(context: Context) extends SQLiteOpenHelper(context, ResDb.Name,
       * @return
       */
     def someCursorForFirstnameQuery(firstName: String): Option[Cursor] = {
-      Option(db.query("person", Array("id", "firstname", "secondname"), "firstname = ?", Array(firstName), null, null, null))
+      Option(db.query("RegForm", Array("id", "anrede", "firstname", "secondname", "gebDatum","gebOrt","famstand","staat"), "firstname = ?", Array(firstName), null, null, null))
     }
 
     def somePersonCursor(): Option[Cursor] = {
-      Option(db.query("person", Array("id", "firstname", "secondname"), null, null, null, null, null))
+      Option(db.query("RegForm", Array("id", "anrede", "firstname", "secondname","gebDatum","gebOrt","famstand","staat"), null, null, null, null, null))
     }
 
 
   }
 
-  def mkContentValues(p: Person): ContentValues = {
+  def mkContentValues(r: RegForm): ContentValues = {
     val cv = new ContentValues
-    cv.put("firstname", p.firstName)
-    cv.put("secondname", p.secondName)
+    cv.put("anrede", r.person.anrede)
+    cv.put("firstname", r.person.firstName)
+    cv.put("secondname", r.person.secondName)
+    cv.put("gebDatum", r.person.gebDatum)
+    cv.put("gebOrt", r.person.gebOrt)
+    cv.put("famstand", r.person.famStand)
+    cv.put("staat", r.person.staat)
+
     cv
   }
 }
