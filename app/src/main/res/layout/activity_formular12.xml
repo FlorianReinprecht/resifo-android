@@ -23,16 +23,27 @@
         android:progress="88"
         android:indeterminate="false" />
 
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:stepSize="1"
+        android:layout_marginTop="58dp"
+        android:layout_below="@+id/button_startseite"
+        android:layout_centerHorizontal="true" />
+
     <TextView
         android:text="Ihre Daten wurden erfolgreich gespeichert!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
         android:textSize="30sp"
         android:textAlignment="center"
+        android:id="@+id/textView"
+        android:layout_marginTop="44dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/textView" />
+        android:layout_alignParentStart="true" />
 
     <Button
         android:text="Zurück zur Startseite"
@@ -40,19 +51,18 @@
         android:layout_height="wrap_content"
         android:id="@+id/button_startseite"
         android:onClick="goBack"
+        android:layout_marginTop="33dp"
         android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="65dp" />
+        android:layout_centerHorizontal="true" />
 
-    <RatingBar
+    <Button
+        android:text="Bewertung abgeben"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:id="@+id/ratingBar"
-        android:isIndicator="false"
-        android:numStars="5"
-        android:layout_above="@+id/progressBar"
-        android:layout_centerHorizontal="true"
-        android:stepSize="1" />
+        android:id="@+id/button_bewertung"
+        android:onClick="rateMe"
+        android:textSize="12sp"
+        android:layout_below="@+id/ratingBar"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
