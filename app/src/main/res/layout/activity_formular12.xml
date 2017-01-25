@@ -44,4 +44,15 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="65dp" />
 
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/ratingBar"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:layout_above="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:stepSize="1" />
+
 </RelativeLayout>
