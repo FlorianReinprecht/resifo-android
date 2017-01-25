@@ -42,8 +42,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
         android:visibility="visible"
-        android:max="100"
-        android:progress="62"
+        android:max="88"
+        android:progress="64"
         android:indeterminate="false" />
 
     <Button

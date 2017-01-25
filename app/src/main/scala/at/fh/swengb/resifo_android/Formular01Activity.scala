@@ -23,7 +23,7 @@ class Formular01Activity extends AppCompatActivity {
 
   def saveToDb(view: View): Unit = {
     val secondName: String = findViewById(R.id.editText_famname).asInstanceOf[EditText].getText.toString
-    val firstName: String = findViewById(R.id.editText3_vorname).asInstanceOf[EditText].getText.toString
+    val firstName: String = findViewById(R.id.editText_vorname).asInstanceOf[EditText].getText.toString
 
     // I WANT TO WRITE TO THE DATABASE
     aDb.mkPersonTable().insert(Person(firstName, secondName))
