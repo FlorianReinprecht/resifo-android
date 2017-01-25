@@ -10,108 +10,104 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="at.fh.swengb.resifo_android.Formular01Activity">
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ScrollView
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:orientation="vertical"
+            <TextView
+                android:text="Persönliche Daten"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_titel"
+                android:textSize="36sp"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center" />
 
-                <TextView
-                    android:text="Persönliche Daten"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView_titel"
-                    android:textSize="36sp"
-                    android:layout_marginTop="20dp" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText_anrede"
+                android:layout_alignBaseline="@+id/textView_anrede"
+                android:layout_alignBottom="@+id/textView_anrede"
+                android:layout_alignParentStart="true"
+                android:hint="Anrede (Herr/Frau)"
+                android:layout_marginTop="20dp" />
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:id="@+id/editText_anrede"
-                    android:layout_alignBaseline="@+id/textView_anrede"
-                    android:layout_alignBottom="@+id/textView_anrede"
-                    android:layout_alignParentStart="true"
-                    android:hint="Anrede (Herr/Frau)"
-                    android:layout_marginTop="20dp" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText_titel"
+                android:hint="Titel" />
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:id="@+id/editText_titel"
-                    android:hint="Titel" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:layout_below="@+id/editText_anrede"
+                android:layout_alignEnd="@+id/editText_anrede"
+                android:id="@+id/editText_famname"
+                android:hint="Familienname" />
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:layout_below="@+id/editText_anrede"
-                    android:layout_alignEnd="@+id/editText_anrede"
-                    android:id="@+id/editText_famname"
-                    android:hint="Familienname" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:layout_below="@+id/editText_famname"
+                android:layout_alignParentStart="true"
+                android:id="@+id/editText_vorname"
+                android:hint="Vorname" />
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:layout_below="@+id/editText_famname"
-                    android:layout_alignParentStart="true"
-                    android:id="@+id/editText3_vorname"
-                    android:hint="Vorname" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:ems="10"
+                android:layout_below="@+id/editText_vorname"
+                android:layout_alignParentStart="true"
+                android:id="@+id/editText_gebdatum"
+                android:hint="Geburtsdatum (TT.MM.JJJJ)" />
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="date"
-                    android:ems="10"
-                    android:layout_below="@+id/editText3_vorname"
-                    android:layout_alignParentStart="true"
-                    android:id="@+id/editText_gebdatum"
-                    android:hint="Geburtsdatum (TT.MM.JJJJ)" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:layout_below="@+id/editText_gebdatum"
+                android:layout_alignParentStart="true"
+                android:id="@+id/editText_gebort"
+                android:hint="Geburtsort" />
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:layout_below="@+id/editText_gebdatum"
-                    android:layout_alignParentStart="true"
-                    android:id="@+id/editText_gebort"
-                    android:hint="Geburtsort" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:layout_below="@+id/editText_gebort"
+                android:layout_alignParentStart="true"
+                android:id="@+id/editText_famstand"
+                android:hint="Familienstand" />
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:layout_below="@+id/editText_gebort"
-                    android:layout_alignParentStart="true"
-                    android:id="@+id/editText_famstand"
-                    android:hint="Familienstand" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:layout_below="@+id/editText_famstand"
-                    android:layout_alignParentStart="true"
-                    android:id="@+id/editText_staat"
-                    android:hint="Staatsangehörigkeit"
-                    android:layout_marginBottom="20dp" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:layout_below="@+id/editText_famstand"
+                android:layout_alignParentStart="true"
+                android:id="@+id/editText_staat"
+                android:hint="Staatsangehörigkeit"
+                android:layout_marginBottom="20dp" />
 
                 <Button
                     android:text="Load"
@@ -127,34 +123,33 @@
                     android:id="@+id/button_save"
                     android:onClick="saveToDb" />
 
-                <Button
-                    android:text="Weiter"
-                    android:layout_width="102dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button_weiter"
-                    android:onClick="getNext"
-                    android:layout_marginStart="270dp"
-                    android:layout_marginBottom="33dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentStart="true"
-                    android:contextClickable="false" />
 
-                <ProgressBar
-                    style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:id="@+id/progressBar"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentStart="true"
-                    android:visibility="visible"
-                    android:max="100"
-                    android:progress="1"
-                    android:indeterminate="false" />
+            <Button
+                android:text="Weiter"
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_weiter"
+                android:onClick="getNext"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:contextClickable="false"
+                android:layout_marginStart="230dp" />
 
-            </LinearLayout>
-        </ScrollView>
-    </LinearLayout>
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/progressBar"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:visibility="visible"
+                android:max="100"
+                android:progress="1"
+                android:indeterminate="false" />
+
+        </LinearLayout>
+    </ScrollView>
 
 
 </RelativeLayout>
