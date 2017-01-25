@@ -114,6 +114,20 @@
                     android:layout_marginBottom="20dp" />
 
                 <Button
+                    android:text="Load"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button_load"
+                    android:onClick="loadFromDb" />
+
+                <Button
+                    android:text="Save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button_save"
+                    android:onClick="saveToDb" />
+
+                <Button
                     android:text="Weiter"
                     android:layout_width="102dp"
                     android:layout_height="wrap_content"

@@ -31,6 +31,7 @@
         <activity android:name=".Formular10Activity" />
         <activity android:name=".Formular11Activity" />
         <activity android:name=".Formular12Activity"></activity>
+        <activity android:name=".ResListActivity"></activity>
     </application>
 
 </manifest>
