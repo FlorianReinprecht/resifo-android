@@ -42,32 +42,6 @@
         android:indeterminate="false" />
 
     <TextView
-        android:text="Art:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView_art"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:text="Ausstellungsdatum:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView_art"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="36dp"
-        android:id="@+id/textView_ausdatum" />
-
-    <TextView
-        android:text="auszustellende Behörde:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView_ausdatum"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="30dp"
-        android:id="@+id/textView_beh" />
-
-    <TextView
         android:text="Ihre Reisedokumente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -77,5 +51,36 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/textView_reisedokumente"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="114dp"
+        android:id="@+id/editText_art"
+        android:hint="Art:" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/editText_art"
+        android:layout_alignParentStart="true"
+        android:id="@+id/editText_ausstellungsdatum"
+        android:hint="Ausstellungsdatum:" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/editText_ausstellungsdatum"
+        android:layout_alignParentStart="true"
+        android:id="@+id/editText_behoerde"
+        android:hint="Auszustellende Behörde:" />
 
 </RelativeLayout>

@@ -11,19 +11,6 @@
     tools:context="at.fh.swengb.resifo_android.SelectActivity">
 
     <Button
-        android:text="neu"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_neu"
-        android:layout_marginTop="79dp"
-        android:minHeight="60dp"
-        android:textSize="24sp"
-        android:maxWidth="60dip"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="newForm" />
-
-    <Button
         android:text="bearbeiten"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
@@ -47,5 +34,18 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:onClick="getInfo" />
+
+    <Button
+        android:text="neu"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_neu"
+        android:layout_marginTop="80dp"
+        android:minHeight="60dp"
+        android:textSize="24sp"
+        android:maxWidth="60dip"
+        android:onClick="newForm"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

@@ -16,7 +16,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:id="@+id/button_bearbeiten" />
+        android:id="@+id/button_bearbeiten"
+        android:onClick="bearbeiten" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -32,8 +33,9 @@
         android:text="Löschen "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button_zurueck"
+        android:id="@+id/button_loeschen"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:onClick="loeschen" />
 
 </RelativeLayout>

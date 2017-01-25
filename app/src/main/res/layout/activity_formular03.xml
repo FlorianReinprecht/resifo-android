@@ -53,4 +53,16 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="22dp"
+        android:id="@+id/editText_zmr"
+        android:hint="ZMR-Zahl"
+        android:layout_below="@+id/textView_zmr"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>

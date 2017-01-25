@@ -29,69 +29,6 @@
             android:id="@+id/textView_anmeldung" />
 
         <TextView
-            android:text="Land:"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView_land"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="122dp" />
-
-        <TextView
-        android:text="PLZ:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:id="@+id/textView_plz"
-            android:layout_below="@+id/textView_land"
-            android:layout_alignEnd="@+id/textView_land" />
-
-        <TextView
-            android:text="Ort:"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:id="@+id/textView_ort"
-            android:layout_below="@+id/textView_plz"
-            android:layout_alignEnd="@+id/textView_plz" />
-
-        <TextView
-        android:text="Straße: "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView_strasse"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true" />
-
-        <TextView
-            android:text="Hausnr.:"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView_hausNr"
-            android:layout_above="@+id/textView_hauptwohnsitz"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="32dp" />
-
-        <TextView
-        android:text="Stiege:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView_stiege"
-            android:layout_alignBaseline="@+id/textView_hausNr"
-            android:layout_alignBottom="@+id/textView_hausNr"
-            android:layout_toEndOf="@+id/button_zurueck"
-            android:layout_marginStart="37dp" />
-
-        <TextView
-        android:text="Türnr.:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-            android:id="@+id/textView_tuerNr"
-            android:layout_alignBaseline="@+id/textView_stiege"
-            android:layout_alignBottom="@+id/textView_stiege"
-            android:layout_toEndOf="@+id/button_nein" />
-
-        <TextView
             android:text="Ist diese Unterkunft Hauptwohnsitz?"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -144,6 +81,85 @@
             android:max="100"
             android:progress="37"
             android:indeterminate="false" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="120dp"
+            android:id="@+id/editText_land"
+            android:hint="Land:" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText_plz"
+            android:layout_below="@+id/editText_land"
+            android:layout_alignParentStart="true"
+            android:hint="PLZ:"
+            android:layout_toStartOf="@+id/editText_ort" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText_ort"
+            android:hint="Ort:"
+            android:layout_alignBaseline="@+id/editText_plz"
+            android:layout_alignBottom="@+id/editText_plz"
+            android:layout_toEndOf="@+id/button_ja" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:layout_below="@+id/editText_plz"
+            android:layout_alignParentStart="true"
+            android:id="@+id/editText_straße"
+            android:hint="Straße:" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText_tuer"
+            android:layout_below="@+id/editText_straße"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/button_nein"
+            android:layout_alignEnd="@+id/button_zurueck"
+            android:hint="Türnr.:"
+            android:width="100dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText_stiege"
+            android:hint="Stiege:"
+            android:layout_below="@+id/editText_straße"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/button_nein"
+            android:width="100dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText_hausnummer"
+            android:hint="Hausnr.:"
+            android:width="100dp"
+            android:layout_below="@+id/editText_straße"
+            android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
 
