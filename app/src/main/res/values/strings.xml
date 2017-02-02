@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Meldezettel</string>
+
+    <string-array name="array_famstand">
+        <item>ledig</item>
+        <item>verheiratet</item>
+        <item>in eingetragener Partnerschaft lebend</item>
+        <item>geschieden</item>
+        <item>Ehe aufgehoben oder für nichtig erklärt</item>
+        <item>eingetragene Partnerschaft aufgelöst oder für nichtig erklärt</item>
+        <item>verwitwet</item>
+        <item>hinterbliebener eingetragener Partner</item>
+    </string-array>
+
 </resources>

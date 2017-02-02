@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.EditText
+import android.widget.{ArrayAdapter, EditText, Spinner}
 
 class Formular01Activity extends AppCompatActivity {
 
@@ -14,6 +14,11 @@ class Formular01Activity extends AppCompatActivity {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_formular01)
     aDb = ResDb(getApplicationContext)
+
+    val spinner = findViewById(R.id.spinner_famstand).asInstanceOf[Spinner]
+    val adapter = ArrayAdapter.createFromResource(this, R.array.array_famstand, android.R.layout.simple_spinner_item)
+    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+    spinner.setAdapter(adapter)
   }
 
   def getNext(view: View):Unit = {
@@ -40,7 +45,6 @@ class Formular01Activity extends AppCompatActivity {
   def loadFromDb(view: View): Unit = {
     val i = new Intent(this, classOf[ResListActivity])
     startActivity(i)
-
   }
   */
 }
