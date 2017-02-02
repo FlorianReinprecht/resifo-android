@@ -65,6 +65,14 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:ems="10"
+                android:id="@+id/editText_famnameVor"
+                android:hint="Familienname vor der ersten Ehe" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
                 android:layout_below="@+id/editText_famname"
                 android:layout_alignParentStart="true"
                 android:id="@+id/editText_vorname"

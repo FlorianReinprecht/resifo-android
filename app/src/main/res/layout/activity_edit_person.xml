@@ -10,32 +10,238 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="at.fh.swengb.resifo_android.EditPersonActivity">
 
-    <Button
-        android:text="Bearbeiten"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/button_bearbeiten"
-        android:onClick="bearbeiten" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="12dp"
-        android:id="@+id/textView_zusammenfassung"
-        android:layout_above="@+id/button_bearbeiten"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true">
 
-    <Button
-        android:text="Löschen "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_loeschen"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:onClick="loeschen" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:text="Persönliche Daten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:textSize="18sp"
+                android:paddingBottom="10dp"
+                tools:text="Persönliche Daten" />
+
+            <TextView
+                android:text="Anrede:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_anrede "
+                tools:text="Anrede:" />
+
+            <TextView
+                android:text="Familienname VOR:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_familiennameVor "
+                tools:text="Familienname VOR:" />
+
+            <TextView
+                android:text="Name:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_name "
+                tools:text="Name:" />
+
+            <TextView
+                android:text="Geburtsdaten:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_geburt "
+                tools:text="Geburtsdaten:" />
+
+            <TextView
+                android:text="Religion:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_religion "
+                tools:text="Religion:" />
+
+            <TextView
+                android:text="Familienstand:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_familienstand "
+                tools:text="Familienstand:" />
+
+            <TextView
+                android:text="Staatsangehörigkeit:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_staatsangehoerigkeit "
+                tools:text="Staatsangehörigkeit:" />
+
+            <TextView
+                android:text="ZMR-Zahl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_zmrZahl "
+                tools:text="ZMR-Zahl" />
+
+            <TextView
+                android:text="Reisedokument bei Fremden"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView12"
+                android:textSize="18sp"
+                android:paddingBottom="10dp"
+                android:paddingTop="20dp"
+                tools:text="Reisedokument bei Fremden" />
+
+            <TextView
+                android:text="Reisepassnummer:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_reisepassnummer "
+                tools:text="Reisepassnummer:" />
+
+            <TextView
+                android:text="Ausstellungsdatum:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_ausstellungsdatum "
+                tools:text="Ausstellungsdatum:" />
+
+            <TextView
+                android:text="Ausstellende Behörde"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_ausstellendeBehoerde "
+                tools:text="Ausstellende Behörde" />
+
+            <TextView
+                android:text="Anmeldung der Unterkunft in:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView16"
+                android:textSize="18sp"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                tools:text="Anmeldung der Unterkunft in:" />
+
+            <TextView
+                android:text="Adresse:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_anmStrasse "
+                tools:text="Adresse:" />
+
+            <TextView
+                android:text="PLZ, Ort:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_anmOrt "
+                tools:text="PLZ, Ort:" />
+
+            <TextView
+                android:text="Ist das Ihr Hauptwohnsitz?"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_hauptwohnsitz "
+                tools:text="Ist das Ihr Hauptwohnsitz?" />
+
+            <TextView
+                android:text="Hauptwohnsitz bleibt in:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView20"
+                android:textSize="18sp"
+                android:paddingBottom="10dp"
+                android:paddingTop="20dp"
+                tools:text="Hauptwohnsitz bleibt in:" />
+
+            <TextView
+                android:text="Adresse:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_hauptStrasse "
+                tools:text="Adresse:" />
+
+            <TextView
+                android:text="PLZ, Ort:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_hauptOrt "
+                tools:text="PLZ, Ort:" />
+
+            <TextView
+                android:text="Ziehen Sie aus dem Ausland?"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_zuzug "
+                tools:text="Ziehen Sie aus dem Ausland?" />
+
+            <TextView
+                android:text="Abmeldung der Unterkunft in:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView24"
+                android:textSize="18sp"
+                android:paddingBottom="10dp"
+                android:paddingTop="20dp"
+                tools:text="Abmeldung der Unterkunft in:" />
+
+            <TextView
+                android:text="Adresse:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_abmStrasse "
+                android:textSize="14sp"
+                tools:text="Adresse:" />
+
+            <TextView
+                android:text="PLZ, Ort:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_abmOrt "
+                tools:text="PLZ, Ort:" />
+
+            <TextView
+                android:text="Verziehen Sie ins Ausland?"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_verzug "
+                tools:text="Verziehen Sie ins Ausland?" />
+
+            <TextView
+                android:text="Unterkunftgeber:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView28"
+                android:textSize="18sp"
+                android:paddingBottom="10dp"
+                android:paddingTop="20dp"
+                tools:text="Unterkunftgeber:" />
+
+            <TextView
+                android:text="Nachname:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_unterkunftNachname "
+                tools:text="Nachname:" />
+
+            <TextView
+                android:text="Vorname:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_unterkunftVorname "
+                tools:text="Vorname:" />
+
+            <TextView
+                android:text="Datum:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_unterkunftDatum "
+                tools:text="Datum:" />
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

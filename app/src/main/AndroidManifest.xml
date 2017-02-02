@@ -30,8 +30,9 @@
         <activity android:name=".Formular09Activity" />
         <activity android:name=".Formular10Activity" />
         <activity android:name=".Formular11Activity" />
-        <activity android:name=".Formular12Activity"></activity>
-        <activity android:name=".ResListActivity"></activity>
+        <activity android:name=".Formular12Activity" />
+        <activity android:name=".ResListActivity" />
+        <activity android:name=".TestActivity"></activity>
     </application>
 
 </manifest>
