@@ -31,8 +31,10 @@ class Formular01Activity extends AppCompatActivity {
     val staat: String = findViewById(R.id.editText_staat).asInstanceOf[EditText].getText.toString
 
 
+
+
     // I WANT TO WRITE TO THE DATABASE
-    aDb.mkRegFormTable().insert(RegForm(Person(anrede,firstName, secondName,gebDatum,gebOrt,famStand,staat)))
+    aDb.mkRegFormTable().insert(RegForm(Person(anrede,firstName, secondName,gebDatum,gebOrt,famStand,staat),Zmr(zmr), Reisepass(art, ausstellungsdatum, behoerde), AnmUnterkunft(land, plz, ort, straße, tuer, hausnummer, stiege), HauptwohnsitzBleibt(land, plz, ort, straße, tuer, hausnummer, stiege), AbmUnterkunft(land, plz, ort, straße, tuer, hausnummer, stiege),Unterkunftgeber(nachname, vorname)))
   }
 
   def loadFromDb(view: View): Unit = {

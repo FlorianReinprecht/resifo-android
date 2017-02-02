@@ -50,16 +50,6 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/editText_nachname"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"
-        android:hint="Nachname" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
         android:id="@+id/editText_vorname"
         android:layout_below="@+id/editText_nachname"
         android:layout_alignParentStart="true"
@@ -74,5 +64,15 @@
         android:layout_above="@+id/progressBar"
         android:layout_alignParentEnd="true"
         android:onClick="saveData" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText_nachname"
+        android:hint="Nachname"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

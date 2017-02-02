@@ -39,6 +39,8 @@
             android:id="@+id/editText_land"
             android:hint="Land:" />
 
+
+
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -49,17 +51,6 @@
             android:layout_alignParentStart="true"
             android:hint="PLZ:"
             android:layout_toStartOf="@+id/editText_ort" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/editText_ort"
-            android:hint="Ort:"
-            android:layout_alignBaseline="@+id/editText_plz"
-            android:layout_alignBottom="@+id/editText_plz"
-            android:layout_toEndOf="@+id/button_ja" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -137,6 +128,16 @@
             android:max="88"
             android:progress="40"
             android:indeterminate="false" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText_ort"
+            android:hint="Ort:"
+            android:layout_below="@+id/editText_land"
+            android:layout_alignParentEnd="true" />
 
     </RelativeLayout>
 

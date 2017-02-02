@@ -20,4 +20,10 @@ class Formular04Activity extends AppCompatActivity {
     val nextView = new Intent(this, classOf[Formular05Activity])
     startActivity(nextView)
   }
+
+  def saveObject(view: View): Unit = {
+    val art: String = findViewById(R.id.editText_art).asInstanceOf[EditText].getText.toString
+    val ausstellungsdatum: String = findViewById(R.id.editText_ausstellungsdatum).asInstanceOf[EditText].getText.toString
+    val behoerde: String = findViewById(R.id.editText_behoerde).asInstanceOf[EditText].getText.toString
+  }
 }

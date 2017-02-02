@@ -20,4 +20,9 @@ class Formular03Activity extends AppCompatActivity {
     val nextView = new Intent(this, classOf[Formular04Activity])
     startActivity(nextView)
   }
+
+  def saveObject(view: View): Unit = {
+    val zmr: String = findViewById(R.id.editText_zmr).asInstanceOf[EditText].getText.toString
+  }
+
 }

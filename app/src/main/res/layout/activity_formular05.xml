@@ -130,19 +130,6 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editText_tuer"
-            android:layout_below="@+id/editText_straße"
-            android:layout_alignParentStart="true"
-            android:layout_toStartOf="@+id/button_nein"
-            android:layout_alignEnd="@+id/button_zurueck"
-            android:hint="Türnr.:"
-            android:width="100dp" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
             android:id="@+id/editText_stiege"
             android:hint="Stiege:"
             android:layout_below="@+id/editText_straße"
@@ -160,6 +147,17 @@
             android:width="100dp"
             android:layout_below="@+id/editText_straße"
             android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText_tuer"
+            android:hint="Türnr.:"
+            android:width="100dp"
+            android:layout_below="@+id/editText_straße"
+            android:layout_alignParentStart="true" />
 
     </RelativeLayout>
 

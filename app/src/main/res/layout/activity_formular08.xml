@@ -55,17 +55,6 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editText_ort"
-            android:hint="Ort:"
-            android:layout_alignBaseline="@+id/editText_plz"
-            android:layout_alignBottom="@+id/editText_plz"
-            android:layout_toEndOf="@+id/button_ja" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
             android:layout_below="@+id/editText_plz"
             android:layout_alignParentStart="true"
             android:id="@+id/editText_straße"
@@ -139,6 +128,17 @@
             android:layout_above="@+id/progressBar"
             android:layout_alignParentEnd="true"
             android:onClick="getNext" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText_ort"
+            android:hint="Ort:"
+            android:layout_below="@+id/editText_land"
+            android:layout_toEndOf="@+id/editText_tuer"
+            android:layout_marginStart="11dp" />
 
     </RelativeLayout>
 
