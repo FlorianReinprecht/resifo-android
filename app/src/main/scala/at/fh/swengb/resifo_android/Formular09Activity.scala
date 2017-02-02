@@ -17,6 +17,8 @@ class Formular09Activity extends AppCompatActivity {
     startActivity(prevView)
   }
   */
+  def Prev(view : View) : Unit = onBackPressed()
+
 
   def auslandYes(view: View): Unit = {
     // hier irgendetwas implementieren, das "aus Ausland herziehen" auf JA setzt

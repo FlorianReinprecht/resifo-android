@@ -19,6 +19,8 @@ class Formular03Activity extends AppCompatActivity {
     startActivity(prevView)
   }
   */
+  def Prev(view : View) : Unit = onBackPressed()
+
 
   def getNext(view: View):Unit = {
     val nextView = new Intent(this, classOf[Formular04Activity])

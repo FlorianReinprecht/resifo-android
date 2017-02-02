@@ -19,6 +19,8 @@ class Formular07Activity extends AppCompatActivity {
   }
   */
 
+  def Prev(view : View) : Unit = onBackPressed()
+
   def auslandYes(view: View):Unit = {
     // hier irgendetwas implementieren, das "ins Ausland ziehen" auf JA setzt
     val nextView = new Intent(this, classOf[Formular10Activity])

@@ -16,6 +16,8 @@ class Formular02Activity extends AppCompatActivity {
     startActivity(prevView)
   }
   */
+def Prev(view : View) : Unit = onBackPressed()
+
 
   def zmrYes(view: View):Unit = {
     val zmrY = new Intent(this, classOf[Formular03Activity])
