@@ -57,25 +57,19 @@ case class ResDb(context: Context) extends SQLiteOpenHelper(context, ResDb.Name,
       db.insert("regForm", null, cv)
     }
 
-    def deleteByFirstName(firstName : String) : Unit = {
-      db.delete("regForm", "firstname = ?", Array(firstName))
+    def deleteById(id : String) : Unit = {
+      db.delete("regForm", "id = ?", null)
     }
 
     def update(r : RegForm) : Unit = {
-      db.update("regForm", mkContentValues(r), "firstname = ? and secondname = ?", Array(r.person.firstName,r.person.secondName))
+      db.update("regForm", mkContentValues(r), "id = ?",null)
     }
 
-    /**
-      * Returns a list of persons matching given firstName, or Nil if there is none
-      *
-      * @param firstName the firstName to search for
-      * @return
-      */
-    def listByFirstName(firstName: String): List[RegForm] = {
-      var someCursor: Option[Cursor] = None
+    def listAll(): List[RegForm] = {
+      var cursorRegForm: Option[Cursor] = None
       try {
-        someCursor = someCursorForFirstnameQuery(firstName)
-        someCursor match {
+        cursorRegForm = regFormCursor()
+        cursorRegForm match {
           case None =>
             System.err.println("Could not execute query due to some reason")
             Nil
@@ -95,22 +89,12 @@ case class ResDb(context: Context) extends SQLiteOpenHelper(context, ResDb.Name,
             lb.toList
         }
       } finally {
-        someCursor foreach (_.close())
+        cursorRegForm foreach (_.close())
       }
 
     }
 
-    /**
-      * Returns an optional cursor for a firstname query on the person table.
-      *
-      * @param firstName
-      * @return
-      */
-    def someCursorForFirstnameQuery(firstName: String): Option[Cursor] = {
-      Option(db.query("RegForm", Array("id", "anrede", "firstname", "secondname", "gebDatum","gebOrt","famstand","staat"), "firstname = ?", Array(firstName), null, null, null))
-    }
-
-    def somePersonCursor(): Option[Cursor] = {
+    def regFormCursor(): Option[Cursor] = {
       Option(db.query("RegForm", Array("id", "anrede", "firstname", "secondname","gebDatum","gebOrt","famstand","staat"), null, null, null, null, null))
     }
 
