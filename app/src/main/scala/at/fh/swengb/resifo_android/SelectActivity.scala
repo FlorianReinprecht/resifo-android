@@ -24,4 +24,6 @@ class SelectActivity extends AppCompatActivity {
     val infoView = new Intent(this, classOf[InformationActivity])
     startActivity(infoView)
   }
+
+
 }

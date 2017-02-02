@@ -20,7 +20,7 @@ class Formular01Activity extends AppCompatActivity {
     val nextView = new Intent(this, classOf[Formular02Activity])
     startActivity(nextView)
   }
-
+/*
   def saveToDb(view: View): Unit = {
     val anrede: String = findViewById(R.id.editText_anrede).asInstanceOf[EditText].getText.toString
     val firstName: String = findViewById(R.id.editText_vorname).asInstanceOf[EditText].getText.toString
@@ -42,6 +42,7 @@ class Formular01Activity extends AppCompatActivity {
     startActivity(i)
 
   }
+  */
 }
 
 

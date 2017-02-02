@@ -90,7 +90,7 @@ case class ResDb(context: Context) extends SQLiteOpenHelper(context, ResDb.Name,
               val gebOrt = c.getString(c.getColumnIndex("gebOrt"))
               val famStand = c.getString(c.getColumnIndex("famstand"))
               val staat = c.getString(c.getColumnIndex("staat"))
-              lb.append(RegForm(Person(anrede, firstName, secondName, gebDatum, gebOrt, famStand, staat)))
+//              lb.append(RegForm(Person(anrede, firstName, secondName, gebDatum, gebOrt, famStand, staat)))
             }
             lb.toList
         }

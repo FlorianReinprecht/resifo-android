@@ -10,11 +10,12 @@ class Formular02Activity extends AppCompatActivity {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_formular02)
   }
-
+/*
   def getPrev(view: View):Unit = {
     val prevView = new Intent(this, classOf[Formular01Activity])
     startActivity(prevView)
   }
+  */
 
   def zmrYes(view: View):Unit = {
     val zmrY = new Intent(this, classOf[Formular03Activity])
@@ -25,5 +26,6 @@ class Formular02Activity extends AppCompatActivity {
     val zmrN = new Intent(this, classOf[Formular04Activity])
     startActivity(zmrN)
   }
+
 
 }

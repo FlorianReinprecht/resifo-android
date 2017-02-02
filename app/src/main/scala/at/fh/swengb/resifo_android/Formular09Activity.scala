@@ -11,10 +11,12 @@ class Formular09Activity extends AppCompatActivity {
     setContentView(R.layout.activity_formular09)
   }
 
+  /*
   def getPrev(view: View): Unit = {
     val prevView = new Intent(this, classOf[Formular08Activity])
     startActivity(prevView)
   }
+  */
 
   def auslandYes(view: View): Unit = {
     // hier irgendetwas implementieren, das "aus Ausland herziehen" auf JA setzt

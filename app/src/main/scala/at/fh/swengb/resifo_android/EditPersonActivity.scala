@@ -15,4 +15,5 @@ class EditPersonActivity extends AppCompatActivity {
   def saveObject(view: View): Unit = {
     val zusammenfassung: String = findViewById(R.id.textView_zusammenfassung).asInstanceOf[EditText].getText.toString
 
+  }
 }

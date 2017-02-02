@@ -105,7 +105,7 @@
             android:id="@+id/button_zurueck"
             android:layout_above="@+id/progressBar"
             android:layout_alignParentStart="true"
-            android:onClick="getPrev" />
+            android:onClick="onBackPressed" />
 
         <Button
             android:text="Weiter"

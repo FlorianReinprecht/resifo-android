@@ -11,10 +11,12 @@ class Formular10Activity extends AppCompatActivity {
     setContentView(R.layout.activity_formular10)
   }
 
+  /*
   def getPrev(view: View): Unit = {
     val prevView = new Intent(this, classOf[Formular05Activity])
     startActivity(prevView)
   }
+  */
 
   def getNext(view: View): Unit = {
     val prevView = new Intent(this, classOf[Formular11Activity])
