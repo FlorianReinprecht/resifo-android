@@ -9,9 +9,18 @@ import android.widget.EditText
 
 
 class Formular04Activity extends AppCompatActivity {
+  var bundle: Bundle = _
+  var intent: Intent = _
   override protected def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_formular04)
+
+    intent = getIntent();
+
+    /*
+    val person: Person  = intent.getExtras().getBundle("bundleFormular03Activity").getSerializable("intentFormular03Activity_Person").asInstanceOf[Person]
+    val zmr: Zmr  = intent.getExtras().getBundle("bundleFormular03Activity").getSerializable("intentFormular03Activity_ZMR").asInstanceOf[Zmr]
+  */
   }
 
   /*
@@ -24,13 +33,23 @@ class Formular04Activity extends AppCompatActivity {
 
 
   def getNext(view: View):Unit = {
+    val docart: String = findViewById(R.id.editText_art).asInstanceOf[EditText].getText.toString
+    val docNr: String = findViewById(R.id.editText_rdNr).asInstanceOf[EditText].getText.toString
+    val ausstellungsdatum: String = findViewById(R.id.editText_ausstellungsdatum).asInstanceOf[EditText].getText.toString
+    val behoerde: String = findViewById(R.id.editText_behoerde).asInstanceOf[EditText].getText.toString
+    val reisepass: Reisepass = Reisepass(docart, docNr, ausstellungsdatum, behoerde)
+
     val nextView = new Intent(this, classOf[Formular05Activity])
+
+    bundle = intent.getExtras().getBundle("bundleFormular03Activity")
+    bundle.putSerializable("intentFormular04Activity_reisepass", reisepass)
+    nextView.putExtra("bundleFormular04Activity", bundle)
     startActivity(nextView)
   }
-
+/*
   def saveObject(view: View): Unit = {
     val art: String = findViewById(R.id.editText_art).asInstanceOf[EditText].getText.toString
     val ausstellungsdatum: String = findViewById(R.id.editText_ausstellungsdatum).asInstanceOf[EditText].getText.toString
     val behoerde: String = findViewById(R.id.editText_behoerde).asInstanceOf[EditText].getText.toString
-  }
+  }*/
 }

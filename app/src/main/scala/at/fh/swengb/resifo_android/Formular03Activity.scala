@@ -8,9 +8,20 @@ import android.widget.EditText
 
 
 class Formular03Activity extends AppCompatActivity {
+  var bundle: Bundle = _
+  var intent: Intent = _
   override protected def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_formular03)
+
+    //intent von voriger Activity übernehmen
+    /*
+    val intent: Intent = getIntent();
+    val person: Person  = intent.getExtras().getBundle("bundlePerson").getSerializable("intentPerson").asInstanceOf[Person]
+    println("Test: " + person)*/
+
+    intent = getIntent();
+
   }
 
   /*
@@ -23,12 +34,18 @@ class Formular03Activity extends AppCompatActivity {
 
 
   def getNext(view: View):Unit = {
+    val zmrString: String = findViewById(R.id.editText_zmr).asInstanceOf[EditText].getText.toString
+    val zmr: Zmr = Zmr(zmrString)
+
     val nextView = new Intent(this, classOf[Formular04Activity])
+    bundle = intent.getExtras().getBundle("bundleFormular02Activity")
+    bundle.putSerializable("intentFormular03Activity_ZMR", zmr)
+    nextView.putExtra("bundleFormular03Activity", bundle)
     startActivity(nextView)
   }
-
+/*
   def saveObject(view: View): Unit = {
     val zmr: String = findViewById(R.id.editText_zmr).asInstanceOf[EditText].getText.toString
   }
-
+*/
 }

@@ -7,9 +7,14 @@ import android.view.View
 
 
 class Formular07Activity extends AppCompatActivity {
+  var bundle: Bundle = _
+  var intent: Intent = _
   override protected def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_formular07)
+
+    intent = getIntent();
+    bundle = intent.getExtras().getBundle("bundleFormular06Activity")
   }
 
   /*
@@ -24,12 +29,16 @@ class Formular07Activity extends AppCompatActivity {
   def auslandYes(view: View):Unit = {
     // hier irgendetwas implementieren, das "ins Ausland ziehen" auf JA setzt
     val nextView = new Intent(this, classOf[Formular10Activity])
+    bundle.putSerializable("intentFormular07Activity_insAuslandziehen", 1)
+    nextView.putExtra("bundleFormular09Activity", bundle)
     startActivity(nextView)
   }
 
   def auslandNo (view: View):Unit = {
     // hier irgendetwas implementieren, das "ins Ausland ziehen" auf NEIN setzt
     val nextView = new Intent(this, classOf[Formular10Activity])
+    bundle.putSerializable("intentFormular07Activity_insAuslandziehen", 0)
+    nextView.putExtra("bundleFormular09Activity", bundle)
     startActivity(nextView)
   }
 }

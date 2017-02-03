@@ -37,8 +37,8 @@ class Formular01Activity extends AppCompatActivity {
     val nextView = new Intent(this, classOf[Formular02Activity])
     val bundle: Bundle = new Bundle();
 
-    bundle.putSerializable("intentPerson",person)
-    nextView.putExtra("bundlePerson",bundle)
+    bundle.putSerializable("intentFormular01Activity_Person",person)
+    nextView.putExtra("bundleFormular01Activity",bundle)
     startActivity(nextView);
 
   }
@@ -57,7 +57,7 @@ class Formular01Activity extends AppCompatActivity {
 
     val person: Person = Person(anrede, titel, firstName,secondName,famnameVor,gebDatum,gebOrt,famStand,religion, staat)
     // I WANT TO WRITE TO THE DATABASE
-    aDb.mkRegFormTable().insert(RegForm(person,Zmr(""), Reisepass("", "", "",""), AnmUnterkunft("", "", "", "", "", "", ""),true, HauptwohnsitzBleibt("", "", "", "", "", "", ""), AbmUnterkunft("", "", "", "", "","", ""),false,true,Unterkunftgeber("", "","")))
+    aDb.mkRegFormTable().insert(RegForm(person,Zmr(""), Reisepass("", "", "",""), AnmUnterkunft("", "", "", "", "", "", ""), HauptwohnsitzBleibt("", "", "", "", "", "", ""), AbmUnterkunft("", "", "", "", "","", ""),Unterkunftgeber("", "","")))
     println(person)
 
   }
