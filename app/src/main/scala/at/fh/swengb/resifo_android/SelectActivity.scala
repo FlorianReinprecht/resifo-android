@@ -12,8 +12,8 @@ class SelectActivity extends AppCompatActivity {
   }
 
   def editForm(view: View):Unit = {
-    val editView = new Intent(this, classOf[EditActivity])
-    startActivity(editView)
+    val i = new Intent(this, classOf[ResListActivity])
+    startActivity(i)
   }
   def newForm(view: View):Unit = {
     val newView = new Intent(this, classOf[Formular01Activity])

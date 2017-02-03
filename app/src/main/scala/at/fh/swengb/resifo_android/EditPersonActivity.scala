@@ -8,13 +8,13 @@ import android.widget.EditText
 
 
 class EditPersonActivity extends AppCompatActivity {
-/*
+  /*
   var person:Person;
 */
   override protected def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_edit_person)
-/*
+    /*
     val intent: Intent = getIntent
 
     person = intent.getExtras.get("person").asInstanceOf[String]
@@ -74,12 +74,11 @@ class EditPersonActivity extends AppCompatActivity {
 
   def saveObject(view: View): Unit = {
     val zusammenfassung: String = findViewById(R.id.textView_zusammenfassung).asInstanceOf[EditText].getText.toString
-*/
+
   }
+  */
 
 
-
-
-
+  }
 
 }

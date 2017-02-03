@@ -24,6 +24,7 @@ class Formular01Activity extends AppCompatActivity {
   def getNext(view: View):Unit = {
 
     val anrede: String = findViewById(R.id.editText_anrede).asInstanceOf[EditText].getText.toString
+    val titel: String = findViewById(R.id.editText_titel).asInstanceOf[EditText].getText.toString
     val firstName: String = findViewById(R.id.editText_vorname).asInstanceOf[EditText].getText.toString
     val secondName: String = findViewById(R.id.editText_famname).asInstanceOf[EditText].getText.toString
     val famnameVor: String = findViewById(R.id.editText_famnameVor).asInstanceOf[EditText].getText.toString
@@ -31,7 +32,7 @@ class Formular01Activity extends AppCompatActivity {
     val gebOrt: String = findViewById(R.id.editText_gebort).asInstanceOf[EditText].getText.toString
     val famStand: String = findViewById(R.id.spinner_famstand).asInstanceOf[Spinner].getSelectedItem.toString
     val staat: String = findViewById(R.id.editText_staat).asInstanceOf[EditText].getText.toString
-    val person: Person = Person(anrede,firstName,secondName,famnameVor,gebDatum,gebOrt,famStand,staat)
+    val person: Person = Person(anrede, titel, firstName,secondName,famnameVor,gebDatum,gebOrt,famStand,staat)
     val nextView = new Intent(this, classOf[Formular02Activity])
     val bundle: Bundle = new Bundle();
 
@@ -40,28 +41,31 @@ class Formular01Activity extends AppCompatActivity {
     startActivity(nextView);
 
   }
-/*
+
   def saveToDb(view: View): Unit = {
     val anrede: String = findViewById(R.id.editText_anrede).asInstanceOf[EditText].getText.toString
+    val titel: String = findViewById(R.id.editText_titel).asInstanceOf[EditText].getText.toString
     val firstName: String = findViewById(R.id.editText_vorname).asInstanceOf[EditText].getText.toString
+    val famnameVor: String = findViewById(R.id.editText_famnameVor).asInstanceOf[EditText].getText.toString
     val secondName: String = findViewById(R.id.editText_famname).asInstanceOf[EditText].getText.toString
     val gebDatum: String = findViewById(R.id.editText_gebdatum).asInstanceOf[EditText].getText.toString
     val gebOrt: String = findViewById(R.id.editText_gebort).asInstanceOf[EditText].getText.toString
-    val famStand: String = findViewById(R.id.editText_famstand).asInstanceOf[EditText].getText.toString
+    val famStand: String = findViewById(R.id.spinner_famstand).asInstanceOf[Spinner].getSelectedItem.toString
     val staat: String = findViewById(R.id.editText_staat).asInstanceOf[EditText].getText.toString
 
-    val person: Person = Person(anrede,firstName,secondName,gebDatum,gebOrt,famStand,staat)
+    val person: Person = Person(anrede, titel, firstName,secondName,famnameVor,gebDatum,gebOrt,famStand,staat)
     // I WANT TO WRITE TO THE DATABASE
     aDb.mkRegFormTable().insert(RegForm(person,Zmr(""), Reisepass("", "", ""), AnmUnterkunft("", "", "", "", "", "", ""),true, HauptwohnsitzBleibt("", "", "", "", "", "", ""), AbmUnterkunft("", "", "", "", "","", ""),false,true,Unterkunftgeber("", "")))
-
+    println(person)
 
   }
-
+/*
   def loadFromDb(view: View): Unit = {
     val i = new Intent(this, classOf[ResListActivity])
     startActivity(i)
   }
   */
+
 }
 
 

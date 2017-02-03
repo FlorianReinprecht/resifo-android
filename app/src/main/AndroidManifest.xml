@@ -32,7 +32,8 @@
         <activity android:name=".Formular11Activity" />
         <activity android:name=".Formular12Activity" />
         <activity android:name=".ResListActivity" />
-        <activity android:name=".TestActivity"></activity>
+        <activity android:name=".TestActivity" />
+        <activity android:name=".test"></activity>
     </application>
 
 </manifest>
