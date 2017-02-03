@@ -29,7 +29,7 @@ class Formular01Activity extends AppCompatActivity {
     val famnameVor: String = findViewById(R.id.editText_famnameVor).asInstanceOf[EditText].getText.toString
     val gebDatum: String = findViewById(R.id.editText_gebdatum).asInstanceOf[EditText].getText.toString
     val gebOrt: String = findViewById(R.id.editText_gebort).asInstanceOf[EditText].getText.toString
-    val famStand: String = findViewById(R.id.editText_famstand).asInstanceOf[EditText].getText.toString
+    val famStand: String = findViewById(R.id.spinner_famstand).asInstanceOf[Spinner].getSelectedItem.toString
     val staat: String = findViewById(R.id.editText_staat).asInstanceOf[EditText].getText.toString
     val person: Person = Person(anrede,firstName,secondName,famnameVor,gebDatum,gebOrt,famStand,staat)
     val nextView = new Intent(this, classOf[Formular02Activity])

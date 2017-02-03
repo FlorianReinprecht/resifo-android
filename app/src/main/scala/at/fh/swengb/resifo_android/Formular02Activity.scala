@@ -25,7 +25,7 @@ class Formular02Activity extends AppCompatActivity {
     startActivity(prevView)
   }
   */
-  */
+
 def Prev(view : View) : Unit = onBackPressed()
 
 
