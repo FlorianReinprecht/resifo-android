@@ -40,7 +40,7 @@ case class ResDb(context: Context) extends SQLiteOpenHelper(context, ResDb.Name,
   case class RegFormTable(db: SQLiteDatabase) {
 
     def init(): Unit = db.execSQL("create table regForm " +
-      "(id INTEGER PRIMARY KEY ASC, anrede TEXT, firstname TEXT, secondname TEXT, gebDatum TEXT, gebOrt TEXT, famstand TEXT, staat TEXT, zmr INTEGER," +
+      "(id INTEGER PRIMARY KEY ASC, anrede TEXT, firstname TEXT, secondname TEXT, famnameVor TEXT, gebDatum TEXT, gebOrt TEXT, famstand TEXT, staat TEXT, zmr INTEGER," +
       "art TEXT, ausstDatum TEXT, auszuBHD TEXT, an_strasse TEXT,an_hausNr TEXT, an_stiege TEXT, an_tuerNr TEXT," +
       "an_plz TEXT, an_ort TEXT, an_hauptWS INTEGER, ab_strasse TEXT, ab_hausNr TEXT, ab_stiege TEXT, ab_tuerNr TEXT," +
       "ab_plz TEXT, ab_ort TEXT, ausland INTEGER, korrekt INTEGER,unter_name STRING,unter_datum TEXT);")
@@ -80,6 +80,7 @@ case class ResDb(context: Context) extends SQLiteOpenHelper(context, ResDb.Name,
               val anrede = c.getString(c.getColumnIndex("anrede"))
               val firstName = c.getString(c.getColumnIndex("firstname"))
               val secondName = c.getString(c.getColumnIndex("secondname"))
+              val famnameVor = c.getString(c.getColumnIndex("famnameVor"))
               val gebDatum = c.getString(c.getColumnIndex("gebDatum"))
               val gebOrt = c.getString(c.getColumnIndex("gebOrt"))
               val famStand = c.getString(c.getColumnIndex("famstand"))
@@ -95,7 +96,7 @@ case class ResDb(context: Context) extends SQLiteOpenHelper(context, ResDb.Name,
     }
 
     def regFormCursor(): Option[Cursor] = {
-      Option(db.query("RegForm", Array("id", "anrede", "firstname", "secondname","gebDatum","gebOrt","famstand","staat"), null, null, null, null, null))
+      Option(db.query("RegForm", Array("id", "anrede", "firstname", "secondname", "famnameVor", "gebDatum","gebOrt","famstand","staat"), null, null, null, null, null))
     }
 
 
@@ -106,6 +107,7 @@ case class ResDb(context: Context) extends SQLiteOpenHelper(context, ResDb.Name,
     cv.put("anrede", r.person.anrede)
     cv.put("firstname", r.person.firstName)
     cv.put("secondname", r.person.secondName)
+    cv.put("famnameVor", r.person.secondName)
     cv.put("gebDatum", r.person.gebDatum)
     cv.put("gebOrt", r.person.gebOrt)
     cv.put("famstand", r.person.famStand)
