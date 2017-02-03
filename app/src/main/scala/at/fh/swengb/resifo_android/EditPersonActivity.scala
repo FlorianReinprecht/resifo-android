@@ -84,7 +84,7 @@ class EditPersonActivity extends AppCompatActivity {
     viewUnterkunftNachname.setText("Nachname: "+ regForm.unterkunftgeber.nachname)
 
     val viewUnterkunftVorname: TextView = findViewById(R.id.textView_unterkunftVorname).asInstanceOf[TextView]
-    viewUnterkunftNachname.setText("Vorname: "+ regForm.unterkunftgeber.vorname)
+    viewUnterkunftVorname.setText("Vorname: "+ regForm.unterkunftgeber.vorname)
 
     val viewUnterkunftDatum: TextView = findViewById(R.id.textView_unterkunftDatum).asInstanceOf[TextView]
     viewUnterkunftDatum.setText("Datum: "+ regForm.unterkunftgeber.datum)
