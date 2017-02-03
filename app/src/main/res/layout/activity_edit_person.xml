@@ -34,56 +34,56 @@
                 android:text="Anrede:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_anrede "
+                android:id="@+id/textView_personAnrede"
                 tools:text="Anrede:" />
 
             <TextView
                 android:text="Familienname VOR:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_familiennameVor "
+                android:id="@+id/textView_familiennameVor"
                 tools:text="Familienname VOR:" />
 
             <TextView
                 android:text="Name:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_name "
+                android:id="@+id/textView_name"
                 tools:text="Name:" />
 
             <TextView
                 android:text="Geburtsdaten:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_geburt "
+                android:id="@+id/textView_geburt"
                 tools:text="Geburtsdaten:" />
 
             <TextView
                 android:text="Religion:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_religion "
+                android:id="@+id/textView_religion"
                 tools:text="Religion:" />
 
             <TextView
                 android:text="Familienstand:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_familienstand "
+                android:id="@+id/textView_familienstand"
                 tools:text="Familienstand:" />
 
             <TextView
                 android:text="Staatsangehörigkeit:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_staatsangehoerigkeit "
+                android:id="@+id/textView_staatsangehoerigkeit"
                 tools:text="Staatsangehörigkeit:" />
 
             <TextView
                 android:text="ZMR-Zahl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_zmrZahl "
+                android:id="@+id/textView_zmrZahl"
                 tools:text="ZMR-Zahl" />
 
             <TextView
@@ -100,21 +100,21 @@
                 android:text="Reisepassnummer:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_reisepassnummer "
+                android:id="@+id/textView_reisepassnummer"
                 tools:text="Reisepassnummer:" />
 
             <TextView
                 android:text="Ausstellungsdatum:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_ausstellungsdatum "
+                android:id="@+id/textView_ausstellungsdatum"
                 tools:text="Ausstellungsdatum:" />
 
             <TextView
                 android:text="Ausstellende Behörde"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_ausstellendeBehoerde "
+                android:id="@+id/textView_ausstellendeBehoerde"
                 tools:text="Ausstellende Behörde" />
 
             <TextView
@@ -131,21 +131,21 @@
                 android:text="Adresse:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_anmStrasse "
+                android:id="@+id/textView_anmStrasse"
                 tools:text="Adresse:" />
 
             <TextView
                 android:text="PLZ, Ort:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_anmOrt "
+                android:id="@+id/textView_anmOrt"
                 tools:text="PLZ, Ort:" />
 
             <TextView
                 android:text="Ist das Ihr Hauptwohnsitz?"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_hauptwohnsitz "
+                android:id="@+id/textView_hauptwohnsitz"
                 tools:text="Ist das Ihr Hauptwohnsitz?" />
 
             <TextView
@@ -162,21 +162,21 @@
                 android:text="Adresse:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_hauptStrasse "
+                android:id="@+id/textView_hauptStrasse"
                 tools:text="Adresse:" />
 
             <TextView
                 android:text="PLZ, Ort:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_hauptOrt "
+                android:id="@+id/textView_hauptOrt"
                 tools:text="PLZ, Ort:" />
 
             <TextView
                 android:text="Ziehen Sie aus dem Ausland?"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_zuzug "
+                android:id="@+id/textView_zuzug"
                 tools:text="Ziehen Sie aus dem Ausland?" />
 
             <TextView
@@ -193,7 +193,7 @@
                 android:text="Adresse:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_abmStrasse "
+                android:id="@+id/textView_abmStrasse"
                 android:textSize="14sp"
                 tools:text="Adresse:" />
 
@@ -201,14 +201,14 @@
                 android:text="PLZ, Ort:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_abmOrt "
+                android:id="@+id/textView_abmOrt"
                 tools:text="PLZ, Ort:" />
 
             <TextView
                 android:text="Verziehen Sie ins Ausland?"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_verzug "
+                android:id="@+id/textView_verzug"
                 tools:text="Verziehen Sie ins Ausland?" />
 
             <TextView
@@ -225,21 +225,21 @@
                 android:text="Nachname:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_unterkunftNachname "
+                android:id="@+id/textView_unterkunftNachname"
                 tools:text="Nachname:" />
 
             <TextView
                 android:text="Vorname:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_unterkunftVorname "
+                android:id="@+id/textView_unterkunftVorname"
                 tools:text="Vorname:" />
 
             <TextView
                 android:text="Datum:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_unterkunftDatum "
+                android:id="@+id/textView_unterkunftDatum"
                 tools:text="Datum:" />
         </LinearLayout>
     </ScrollView>
