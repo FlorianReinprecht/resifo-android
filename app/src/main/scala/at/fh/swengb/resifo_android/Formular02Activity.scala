@@ -4,17 +4,27 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import android.widget.{EditText, TextView}
 
 class Formular02Activity extends AppCompatActivity {
   override protected def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_formular02)
+    val intent: Intent = getIntent();
+    val person :Person = intent.getExtras().getBundle("bundlePerson").getSerializable("intentPerson").asInstanceOf[Person]
+    println(person)
+
+
   }
+
+
+
 /*
   def getPrev(view: View):Unit = {
     val prevView = new Intent(this, classOf[Formular01Activity])
     startActivity(prevView)
   }
+  */
   */
 def Prev(view : View) : Unit = onBackPressed()
 

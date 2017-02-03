@@ -7,6 +7,10 @@ case class RegForm(person: Person, zmr:Zmr, reisepass: Reisepass, anmUnterkunft:
                    an_hauptWS:Boolean=true, hauptwohnsitzBleibt: HauptwohnsitzBleibt, abmUnterkunft: AbmUnterkunft, ausland:Boolean=false, korrekt:Boolean=true, unterkunftgeber: Unterkunftgeber) {
 
 
+
+  override def toString():String =  {
+  "%s %s, %s, %s".format(person.firstName,person.secondName,person.gebDatum,person.gebOrt)
+  }
 }
 
 

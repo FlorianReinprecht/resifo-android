@@ -22,8 +22,22 @@ class Formular01Activity extends AppCompatActivity {
   }
 
   def getNext(view: View):Unit = {
+
+    val anrede: String = findViewById(R.id.editText_anrede).asInstanceOf[EditText].getText.toString
+    val firstName: String = findViewById(R.id.editText_vorname).asInstanceOf[EditText].getText.toString
+    val secondName: String = findViewById(R.id.editText_famname).asInstanceOf[EditText].getText.toString
+    val gebDatum: String = findViewById(R.id.editText_gebdatum).asInstanceOf[EditText].getText.toString
+    val gebOrt: String = findViewById(R.id.editText_gebort).asInstanceOf[EditText].getText.toString
+    val famStand: String = findViewById(R.id.editText_famstand).asInstanceOf[EditText].getText.toString
+    val staat: String = findViewById(R.id.editText_staat).asInstanceOf[EditText].getText.toString
+    val person: Person = Person(anrede,firstName,secondName,gebDatum,gebOrt,famStand,staat)
     val nextView = new Intent(this, classOf[Formular02Activity])
-    startActivity(nextView)
+    val bundle: Bundle = new Bundle();
+
+    bundle.putSerializable("intentPerson",person)
+    nextView.putExtra("bundlePerson",bundle)
+    startActivity(nextView);
+
   }
 /*
   def saveToDb(view: View): Unit = {
@@ -35,11 +49,11 @@ class Formular01Activity extends AppCompatActivity {
     val famStand: String = findViewById(R.id.editText_famstand).asInstanceOf[EditText].getText.toString
     val staat: String = findViewById(R.id.editText_staat).asInstanceOf[EditText].getText.toString
 
-
-
-
+    val person: Person = Person(anrede,firstName,secondName,gebDatum,gebOrt,famStand,staat)
     // I WANT TO WRITE TO THE DATABASE
-    aDb.mkRegFormTable().insert(RegForm(Person(anrede,firstName, secondName,gebDatum,gebOrt,famStand,staat),Zmr(zmr), Reisepass(art, ausstellungsdatum, behoerde), AnmUnterkunft(land, plz, ort, straße, tuer, hausnummer, stiege), HauptwohnsitzBleibt(land, plz, ort, straße, tuer, hausnummer, stiege), AbmUnterkunft(land, plz, ort, straße, tuer, hausnummer, stiege),Unterkunftgeber(nachname, vorname)))
+    aDb.mkRegFormTable().insert(RegForm(person,Zmr(""), Reisepass("", "", ""), AnmUnterkunft("", "", "", "", "", "", ""),true, HauptwohnsitzBleibt("", "", "", "", "", "", ""), AbmUnterkunft("", "", "", "", "","", ""),false,true,Unterkunftgeber("", "")))
+
+
   }
 
   def loadFromDb(view: View): Unit = {
