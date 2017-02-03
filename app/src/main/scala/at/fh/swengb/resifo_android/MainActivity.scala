@@ -13,6 +13,7 @@ class MainActivity extends AppCompatActivity {
 //  println(RegForm(Person("Herr", "Florian", "Reinprecht","10.12.1994","Feldbach","ledig","Österreich")))
 
 
+
   def gotoFirstActivity(view: View):Unit = {
     val i = new Intent(this, classOf[SelectActivity])
     startActivity(i)
