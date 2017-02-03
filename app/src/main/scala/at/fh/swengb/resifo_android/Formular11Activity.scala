@@ -25,7 +25,7 @@ class Formular11Activity extends AppCompatActivity {
 
   def saveObject(view: View): Unit = {
     val nachname: String = findViewById(R.id.editText_nachname).asInstanceOf[EditText].getText.toString
-    val vorname: String = findViewById(R.id.editText_vorname).asInstanceOf[EditText].getText.toString
+    val vorname: String = findViewById(R.id.editText_unterkunft_datum).asInstanceOf[EditText].getText.toString
 
 
   }

@@ -59,18 +59,18 @@
                 tools:text="Geburtsdaten:" />
 
             <TextView
-                android:text="Religion:"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView_religion"
-                tools:text="Religion:" />
-
-            <TextView
                 android:text="Familienstand:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_familienstand"
                 tools:text="Familienstand:" />
+
+            <TextView
+                android:text="Religion:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_religion"
+                tools:text="Religion:" />
 
             <TextView
                 android:text="Staatsangehörigkeit:"
@@ -97,11 +97,18 @@
                 tools:text="Reisedokument bei Fremden" />
 
             <TextView
-                android:text="Reisepassnummer:"
+                android:text="Art:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_reisepassnummer"
-                tools:text="Reisepassnummer:" />
+                android:id="@+id/textView_art"
+                tools:text="Art:" />
+
+            <TextView
+                android:text="Nummer:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_rdNr"
+                tools:text="Nummer:" />
 
             <TextView
                 android:text="Ausstellungsdatum:"

@@ -41,9 +41,9 @@ case class ResDb(context: Context) extends SQLiteOpenHelper(context, ResDb.Name,
 
     def init(): Unit = db.execSQL("create table regForm " +
       "(id INTEGER PRIMARY KEY ASC, anrede TEXT, titel TEXT, firstname TEXT, secondname TEXT, famnameVor TEXT, gebDatum TEXT, gebOrt TEXT, famstand TEXT, religion TEXT, staat TEXT, zmr INTEGER," +
-      "art TEXT, ausstDatum TEXT, auszuBHD TEXT, an_strasse TEXT,an_hausNr TEXT, an_stiege TEXT, an_tuerNr TEXT," +
+      "art TEXT, rdNr TEXT, ausstDatum TEXT, auszuBHD TEXT, an_strasse TEXT,an_hausNr TEXT, an_stiege TEXT, an_tuerNr TEXT," +
       "an_plz TEXT, an_ort TEXT, an_hauptWS INTEGER, ab_strasse TEXT, ab_hausNr TEXT, ab_stiege TEXT, ab_tuerNr TEXT," +
-      "ab_plz TEXT, ab_ort TEXT, ausland INTEGER, korrekt INTEGER,unter_name STRING,unter_datum TEXT);")
+      "ab_plz TEXT, ab_ort TEXT, ausland INTEGER, korrekt INTEGER,unter_secondname TEXT, unter_firstname TEXT, unter_datum TEXT);")
 
 
 
@@ -87,7 +87,7 @@ case class ResDb(context: Context) extends SQLiteOpenHelper(context, ResDb.Name,
               val famStand = c.getString(c.getColumnIndex("famstand"))
               val religion = c.getString(c.getColumnIndex("religion"))
               val staat = c.getString(c.getColumnIndex("staat"))
-              lb.append(RegForm(Person(anrede, titel, firstName, secondName, famnameVor, gebDatum, gebOrt, famStand, religion, staat),Zmr(""), Reisepass("", "", ""), AnmUnterkunft("", "", "", "", "", "", ""),true, HauptwohnsitzBleibt("", "", "", "", "", "", ""), AbmUnterkunft("", "", "", "", "","", ""),false,true,Unterkunftgeber("", "")))
+              lb.append(RegForm(Person(anrede, titel, firstName, secondName, famnameVor, gebDatum, gebOrt, famStand,religion, staat),Zmr(""), Reisepass("", "", "",""), AnmUnterkunft("", "", "", "", "", "", ""),true, HauptwohnsitzBleibt("", "", "", "", "", "", ""), AbmUnterkunft("", "", "", "", "","", ""),false,true,Unterkunftgeber("", "","")))
             }
             lb.toList
         }
@@ -97,8 +97,9 @@ case class ResDb(context: Context) extends SQLiteOpenHelper(context, ResDb.Name,
 
     }
 
+
     def regFormCursor(): Option[Cursor] = {
-      Option(db.query("RegForm", Array("id", "anrede","titel", "firstname", "secondname", "famnameVor", "gebDatum","gebOrt","famstand", "religion", staat"), null, null, null, null, null))
+      Option(db.query("RegForm", Array("id", "anrede","titel", "firstname", "secondname", "famnameVor", "gebDatum","gebOrt","famstand","religion","staat"), null, null, null, null, null))
     }
 
 
@@ -108,13 +109,13 @@ case class ResDb(context: Context) extends SQLiteOpenHelper(context, ResDb.Name,
     val cv = new ContentValues
     cv.put("anrede", r.person.anrede)
     cv.put("firstname", r.person.firstName)
-    cv.put("titel", r.person.firstName)
+    cv.put("titel", r.person.titel)
     cv.put("secondname", r.person.secondName)
-    cv.put("famnameVor", r.person.secondName)
+    cv.put("famnameVor", r.person.famnameVor)
     cv.put("gebDatum", r.person.gebDatum)
     cv.put("gebOrt", r.person.gebOrt)
     cv.put("famstand", r.person.famStand)
-    cv.put("religion", r.person.famStand)
+    cv.put("religion", r.person.religion)
     cv.put("staat", r.person.staat)
 
     cv

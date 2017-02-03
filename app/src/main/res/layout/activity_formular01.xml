@@ -75,7 +75,7 @@
                 android:ems="10"
                 android:layout_below="@+id/editText_famname"
                 android:layout_alignParentStart="true"
-                android:id="@+id/editText_vorname"
+                android:id="@+id/editText_unterkunft_datum"
                 android:hint="Vorname" />
 
             <EditText
@@ -83,7 +83,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="date"
                 android:ems="10"
-                android:layout_below="@+id/editText_vorname"
+                android:layout_below="@+id/editText_unterkunft_datum"
                 android:layout_alignParentStart="true"
                 android:id="@+id/editText_gebdatum"
                 android:hint="Geburtsdatum (TT.MM.JJJJ)" />

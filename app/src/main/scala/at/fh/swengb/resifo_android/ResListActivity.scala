@@ -35,20 +35,13 @@ class ResListActivity extends ListActivity  {
     val p  = l.getAdapter.getItem(pos).asInstanceOf[RegForm]
     println(p)
     val intent: Intent = new Intent(this, classOf[EditPersonActivity])
+    val bundle: Bundle = new Bundle();
 
-  }
-
-  /*
-    def onItemClick(adapterView: Nothing, view: Nothing, i: Int, l: Long) {
-
-
-    intent.putExtra("user", selectedUser)
+    bundle.putSerializable("intentRegForm",p)
+    intent.putExtra("bundleRegForm",bundle)
     startActivity(intent)
+
   }
 
-
-
-
-  */
 
 }

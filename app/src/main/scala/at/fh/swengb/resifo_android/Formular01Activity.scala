@@ -25,7 +25,7 @@ class Formular01Activity extends AppCompatActivity {
 
     val anrede: String = findViewById(R.id.editText_anrede).asInstanceOf[EditText].getText.toString
     val titel: String = findViewById(R.id.editText_titel).asInstanceOf[EditText].getText.toString
-    val firstName: String = findViewById(R.id.editText_vorname).asInstanceOf[EditText].getText.toString
+    val firstName: String = findViewById(R.id.editText_unterkunft_datum).asInstanceOf[EditText].getText.toString
     val secondName: String = findViewById(R.id.editText_famname).asInstanceOf[EditText].getText.toString
     val famnameVor: String = findViewById(R.id.editText_famnameVor).asInstanceOf[EditText].getText.toString
     val gebDatum: String = findViewById(R.id.editText_gebdatum).asInstanceOf[EditText].getText.toString
@@ -46,7 +46,7 @@ class Formular01Activity extends AppCompatActivity {
   def saveToDb(view: View): Unit = {
     val anrede: String = findViewById(R.id.editText_anrede).asInstanceOf[EditText].getText.toString
     val titel: String = findViewById(R.id.editText_titel).asInstanceOf[EditText].getText.toString
-    val firstName: String = findViewById(R.id.editText_vorname).asInstanceOf[EditText].getText.toString
+    val firstName: String = findViewById(R.id.editText_unterkunft_datum).asInstanceOf[EditText].getText.toString
     val famnameVor: String = findViewById(R.id.editText_famnameVor).asInstanceOf[EditText].getText.toString
     val secondName: String = findViewById(R.id.editText_famname).asInstanceOf[EditText].getText.toString
     val gebDatum: String = findViewById(R.id.editText_gebdatum).asInstanceOf[EditText].getText.toString
@@ -57,7 +57,7 @@ class Formular01Activity extends AppCompatActivity {
 
     val person: Person = Person(anrede, titel, firstName,secondName,famnameVor,gebDatum,gebOrt,famStand,religion, staat)
     // I WANT TO WRITE TO THE DATABASE
-    aDb.mkRegFormTable().insert(RegForm(person,Zmr(""), Reisepass("", "", ""), AnmUnterkunft("", "", "", "", "", "", ""),true, HauptwohnsitzBleibt("", "", "", "", "", "", ""), AbmUnterkunft("", "", "", "", "","", ""),false,true,Unterkunftgeber("", "")))
+    aDb.mkRegFormTable().insert(RegForm(person,Zmr(""), Reisepass("", "", "",""), AnmUnterkunft("", "", "", "", "", "", ""),true, HauptwohnsitzBleibt("", "", "", "", "", "", ""), AbmUnterkunft("", "", "", "", "","", ""),false,true,Unterkunftgeber("", "","")))
     println(person)
 
   }

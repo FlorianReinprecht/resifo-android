@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/editText_vorname"
+        android:id="@+id/editText"
         android:layout_below="@+id/editText_nachname"
         android:layout_alignParentStart="true"
         android:hint="Vorname" />
@@ -77,6 +77,16 @@
         android:id="@+id/editText_nachname"
         android:hint="Nachname"
         android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText_unterkunft_datum"
+        android:hint="Datum"
+        android:layout_below="@+id/editText"
         android:layout_alignParentStart="true" />
 
 </RelativeLayout>
