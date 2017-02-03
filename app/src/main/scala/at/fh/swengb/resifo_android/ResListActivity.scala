@@ -25,7 +25,7 @@ class ResListActivity extends ListActivity  {
     val regForms: List[RegForm] = aDb.mkRegFormTable().listAll()
     //val persons: List[Person] = List(Person("Florian","Reinprecht"),Person("Agnesa","Haxha"))
 
-    val pA = new ArrayAdapter[RegForm](this, R.layout.simple_list_item_regform,regForms)
+    val pA = new ArrayAdapter[RegForm](this, R.layout.simple_list_item_regform,R.id.textViewRegForm,regForms)
 
     setListAdapter(pA)
   }
