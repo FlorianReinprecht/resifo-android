@@ -43,7 +43,7 @@ class Formular11Activity extends AppCompatActivity {
     val unterkunftgeber: Unterkunftgeber = new Unterkunftgeber(nachname, vorname, datum)
 
     regForm = RegForm(person,zmr,reisepass,anmUnterkunft,hauptwohnsitzBleibtIn,abmUnterkunft,unterkunftgeber)
-    
+
     val prevView = new Intent(this, classOf[Formular12Activity])
     bundle = intent.getExtras().getBundle("bundleFormular10Activity")
     bundle.putSerializable("intentFormular11Activity_unterkunftgeber", unterkunftgeber)

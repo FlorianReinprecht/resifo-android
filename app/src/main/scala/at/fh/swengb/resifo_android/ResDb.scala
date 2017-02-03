@@ -165,6 +165,8 @@ case class ResDb(context: Context) extends SQLiteOpenHelper(context, ResDb.Name,
     cv.put("religion", r.person.religion)
     cv.put("staat", r.person.staat)
 
+    cv.put("zmr",r.zmr.zmr)
+
     cv.put("art", r.reisepass.art)
     cv.put("rdNr", r.reisepass.nr)
     cv.put("ausstDatum", r.reisepass.ausstellungsdatum)
