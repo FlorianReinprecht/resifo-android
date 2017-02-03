@@ -103,6 +103,14 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:ems="10"
+                android:id="@+id/editText_religion"
+                android:hint="Religion" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
                 android:layout_below="@+id/editText_famstand"
                 android:layout_alignParentStart="true"
                 android:id="@+id/editText_staat"
@@ -136,6 +144,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/button_load"
+                    android:background="#b01817"
+                    android:textColor="#ffffff"
                     android:onClick="loadFromDb" />
 
                 <Button
@@ -143,6 +153,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/button_save"
+                    android:background="#b01817"
+                    android:textColor="#ffffff"
                     android:onClick="saveToDb" />
 
 
@@ -152,6 +164,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/button_weiter"
                 android:onClick="getNext"
+                android:background="#b01817"
+                android:textColor="#ffffff"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
                 android:contextClickable="false"

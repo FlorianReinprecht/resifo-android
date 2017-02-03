@@ -16,7 +16,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".SelectActivity" />
-        <activity android:name=".EditActivity" />
         <activity android:name=".EditPersonActivity" />
         <activity android:name=".Formular01Activity" />
         <activity android:name=".Formular02Activity" />

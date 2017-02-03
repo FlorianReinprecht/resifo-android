@@ -16,6 +16,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button_zurueck"
+        android:background="#b01817"
+        android:textColor="#ffffff"
         android:layout_above="@+id/progressBar"
         android:layout_alignParentStart="true"
         android:onClick="Prev" />
@@ -25,6 +27,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button_weiter"
+        android:background="#b01817"
+        android:textColor="#ffffff"
         android:layout_above="@+id/progressBar"
         android:layout_alignParentEnd="true"
         android:onClick="getNext" />

@@ -51,6 +51,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/button_startseite"
         android:onClick="goBack"
+        android:background="#b01817"
+        android:textColor="#ffffff"
+        android:padding="20dp"
+        android:textSize="16sp"
         android:layout_marginTop="33dp"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true" />

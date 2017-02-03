@@ -27,6 +27,8 @@
     <Button
         android:text="Zurück"
         android:layout_width="wrap_content"
+        android:background="#b01817"
+        android:textColor="#ffffff"
         android:layout_height="wrap_content"
         android:id="@+id/button_zurueck"
         android:layout_above="@+id/progressBar"
