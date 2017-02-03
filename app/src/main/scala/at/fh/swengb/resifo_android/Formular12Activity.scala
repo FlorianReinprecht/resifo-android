@@ -34,13 +34,6 @@ class Formular12Activity extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
   }
 
   def goBack(view: View): Unit = {
