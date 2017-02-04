@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.{ArrayAdapter, EditText, Spinner}
+import android.widget.{ArrayAdapter, EditText, Spinner, Toast}
 
 class Formular01Activity extends AppCompatActivity {
 
@@ -39,7 +39,13 @@ class Formular01Activity extends AppCompatActivity {
 
     bundle.putSerializable("intentFormular01Activity_Person",person)
     nextView.putExtra("bundleFormular01Activity",bundle)
-    startActivity(nextView);
+
+    if( anrede.toString().trim().equals("") || firstName.toString().trim().equals("") || secondName.toString().trim().equals("") || gebDatum.toString().trim().equals("") || gebOrt.toString().trim().equals("") || famStand.toString().trim().equals("") || religion.toString().trim().equals("") || staat.toString().trim().equals("") ){
+      Toast.makeText(getApplicationContext, "Alle Pflichtfelder müssen ausgefüllt werden!", Toast.LENGTH_SHORT).show()
+    }
+    else{
+      startActivity(nextView);
+    }
 
   }
 

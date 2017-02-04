@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.EditText
+import android.widget.{EditText, Toast}
 
 class Formular11Activity extends AppCompatActivity {
   var bundle: Bundle = _
@@ -52,7 +52,14 @@ class Formular11Activity extends AppCompatActivity {
 
     aDb.mkRegFormTable().insert(regForm)
     println(regForm)
-    startActivity(prevView)
+
+    if( nachname.toString().trim().equals("") || vorname.toString().trim().equals("") || datum.toString().trim().equals("")){
+      Toast.makeText(getApplicationContext, "Alle Pflichtfelder müssen ausgefüllt werden!", Toast.LENGTH_SHORT).show()
+    }
+    else{
+      startActivity(prevView);
+    }
+
   }
 
 }

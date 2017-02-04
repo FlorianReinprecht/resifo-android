@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.EditText
+import android.widget.{EditText, Toast}
 
 class Formular06Activity extends AppCompatActivity {
   var bundle: Bundle = _
@@ -42,7 +42,12 @@ class Formular06Activity extends AppCompatActivity {
     bundle.putSerializable("intentFormular06Activity_abmUnterkunft", abmUnterkunft)
 
     nextView.putExtra("bundleFormular06Activity", bundle)
-    startActivity(nextView)
+    if( land.toString().trim().equals("") || plz.toString().trim().equals("") || ort.toString().trim().equals("") || straße.toString().trim().equals("") || hausnummer.toString().trim().equals("")){
+      Toast.makeText(getApplicationContext, "Alle Pflichtfelder müssen ausgefüllt werden!", Toast.LENGTH_SHORT).show()
+    }
+    else{
+      startActivity(nextView);
+    }
   }
 
   /*

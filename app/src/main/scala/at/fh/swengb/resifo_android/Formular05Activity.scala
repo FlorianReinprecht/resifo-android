@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.TextUtils.SimpleStringSplitter
 import android.view.View
-import android.widget.EditText
+import android.widget.{EditText, Toast}
 
 class Formular05Activity extends AppCompatActivity {
   var bundle: Bundle = _
@@ -50,7 +50,22 @@ class Formular05Activity extends AppCompatActivity {
     bundle.putSerializable("intentFormular09Activity_ausAuslandziehen", 0)
 
     nextView.putExtra("bundleFormular05Activity", bundle)
-    startActivity(nextView)
+
+    /*Ich habe sie jetzt einfach nochmal eingelesen.. normalerweise müsst ich nur noch die Vals von oben global machen, dann brauchma den unteren teil net*/
+    val land: String = findViewById(R.id.editText_land).asInstanceOf[EditText].getText.toString
+    val plz: String = findViewById(R.id.editText_plz).asInstanceOf[EditText].getText.toString
+    val ort: String = findViewById(R.id.editText_ort).asInstanceOf[EditText].getText.toString
+    val straße: String = findViewById(R.id.editText_straße).asInstanceOf[EditText].getText.toString
+    val tuer: String = findViewById(R.id.editText_tuer).asInstanceOf[EditText].getText.toString
+    val hausnummer: String = findViewById(R.id.editText_hausnummer).asInstanceOf[EditText].getText.toString
+    val stiege: String = findViewById(R.id.editText_stiege).asInstanceOf[EditText].getText.toString
+    val anmUnterkunft: AnmUnterkunft = AnmUnterkunft(land, plz, ort, straße, tuer, hausnummer, stiege)
+    if( land.toString().trim().equals("") || plz.toString().trim().equals("") || ort.toString().trim().equals("") || straße.toString().trim().equals("") || tuer.toString().trim().equals("") || hausnummer.toString().trim().equals("") || stiege.toString().trim().equals("")){
+      Toast.makeText(getApplicationContext, "Alle Pflichtfelder müssen ausgefüllt werden!", Toast.LENGTH_SHORT).show()
+    }
+    else{
+      startActivity(nextView);
+    }
   }
 
   def hwsNo (view: View):Unit = {
@@ -61,7 +76,21 @@ class Formular05Activity extends AppCompatActivity {
     bundle.putSerializable("intentFormular07Activity_insAuslandziehen", 0)
 
     nextView.putExtra("bundleFormular05Activity", bundle)
-    startActivity(nextView)
+    /*Ich habe sie jetzt einfach nochmal eingelesen.. normalerweise müsst ich nur noch die Vals von oben global machen, dann brauchma den unteren teil net*/
+    val land: String = findViewById(R.id.editText_land).asInstanceOf[EditText].getText.toString
+    val plz: String = findViewById(R.id.editText_plz).asInstanceOf[EditText].getText.toString
+    val ort: String = findViewById(R.id.editText_ort).asInstanceOf[EditText].getText.toString
+    val straße: String = findViewById(R.id.editText_straße).asInstanceOf[EditText].getText.toString
+    val tuer: String = findViewById(R.id.editText_tuer).asInstanceOf[EditText].getText.toString
+    val hausnummer: String = findViewById(R.id.editText_hausnummer).asInstanceOf[EditText].getText.toString
+    val stiege: String = findViewById(R.id.editText_stiege).asInstanceOf[EditText].getText.toString
+    val anmUnterkunft: AnmUnterkunft = AnmUnterkunft(land, plz, ort, straße, tuer, hausnummer, stiege)
+    if( land.toString().trim().equals("") || plz.toString().trim().equals("") || ort.toString().trim().equals("") || straße.toString().trim().equals("") || hausnummer.toString().trim().equals("")){
+      Toast.makeText(getApplicationContext, "Alle Pflichtfelder müssen ausgefüllt werden!", Toast.LENGTH_SHORT).show()
+    }
+    else{
+      startActivity(nextView);
+    }
   }
 
 

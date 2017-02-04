@@ -4,8 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.EditText
-import android.widget.EditText
+import android.widget.{EditText, Toast}
 
 
 class Formular04Activity extends AppCompatActivity {
@@ -44,7 +43,12 @@ class Formular04Activity extends AppCompatActivity {
     bundle = intent.getExtras().getBundle("bundleFormular03Activity")
     bundle.putSerializable("intentFormular04Activity_reisepass", reisepass)
     nextView.putExtra("bundleFormular04Activity", bundle)
-    startActivity(nextView)
+    if( docart.toString().trim().equals("") || docNr.toString().trim().equals("") || ausstellungsdatum.toString().trim().equals("") || behoerde.toString().trim().equals("") || reisepass.toString().trim().equals("")){
+      Toast.makeText(getApplicationContext, "Alle Pflichtfelder müssen ausgefüllt werden!", Toast.LENGTH_SHORT).show()
+    }
+    else{
+      startActivity(nextView);
+    }
   }
 /*
   def saveObject(view: View): Unit = {

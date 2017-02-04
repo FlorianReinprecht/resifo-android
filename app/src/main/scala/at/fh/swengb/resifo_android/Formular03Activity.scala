@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.EditText
+import android.widget.{EditText, Toast}
 
 
 class Formular03Activity extends AppCompatActivity {
@@ -41,7 +41,14 @@ class Formular03Activity extends AppCompatActivity {
     bundle = intent.getExtras().getBundle("bundleFormular02Activity")
     bundle.putSerializable("intentFormular03Activity_ZMR", zmr)
     nextView.putExtra("bundleFormular03Activity", bundle)
-    startActivity(nextView)
+
+    if( zmrString.toString().trim().equals("") ){
+      Toast.makeText(getApplicationContext, "Alle Pflichtfelder müssen ausgefüllt werden!", Toast.LENGTH_SHORT).show()
+    }
+    else{
+      startActivity(nextView);
+    }
+
   }
 /*
   def saveObject(view: View): Unit = {

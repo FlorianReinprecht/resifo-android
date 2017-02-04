@@ -61,25 +61,6 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:layout_below="@+id/editText_ausstellungsdatum"
-        android:layout_alignParentStart="true"
-        android:id="@+id/editText_behoerde"
-        android:hint="Auszustellende Behörde:" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:id="@+id/editText_ausstellungsdatum"
-        android:hint="Ausstellungsdatum:"
-        android:layout_below="@+id/editText_art"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
         android:id="@+id/editText_art"
         android:hint="Art:"
         android:layout_alignBottom="@+id/editText_rdNr"
@@ -89,13 +70,32 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
         android:ems="10"
-        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZüÜöÖäÄ"
         android:layout_marginTop="114dp"
         android:id="@+id/editText_rdNr"
         android:hint="Nr:"
         android:layout_below="@+id/textView_reisedokumente"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/editText_ausstellungsdatum"
+        android:hint="Ausstellungsdatum:"
+        android:layout_below="@+id/editText_art"
+        android:layout_alignParentStart="true"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/editText_ausstellungsdatum"
+        android:layout_alignParentStart="true"
+        android:id="@+id/editText_behoerde"
+        android:hint="Auszustellende Behörde:" />
 
 </RelativeLayout>

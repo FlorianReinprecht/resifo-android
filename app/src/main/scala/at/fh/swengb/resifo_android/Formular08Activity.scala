@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.EditText
+import android.widget.{EditText, Toast}
 
 
 
@@ -44,7 +44,12 @@ class Formular08Activity extends AppCompatActivity {
     bundle.putSerializable("intentFormular08Activity_hauptwohnsitzBleibtIn", hauptwohnsitzBleibtIn)
 
     prevView.putExtra("bundleFormular08Activity", bundle)
-    startActivity(prevView)
+    if( land.toString().trim().equals("") || plz.toString().trim().equals("") || ort.toString().trim().equals("") || straße.toString().trim().equals("") || hausnummer.toString().trim().equals("")){
+      Toast.makeText(getApplicationContext, "Alle Pflichtfelder müssen ausgefüllt werden!", Toast.LENGTH_SHORT).show()
+    }
+    else{
+      startActivity(prevView);
+    }
   }
 
   /*
