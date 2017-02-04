@@ -1,3 +1,4 @@
+<img align="right" src="app/src/main/res/drawable/ic_launcher.png" />
 # Meldezettel Österreich
 Diese App wurde im Rahmen eines Studienprojekts der Lehrveranstaltung "Software Engineering Basic" vom Studiengang "Informationsmanagement" an der [FH Joanneum GmbH](http://fh-joanneum.at/) realisiert.
 
