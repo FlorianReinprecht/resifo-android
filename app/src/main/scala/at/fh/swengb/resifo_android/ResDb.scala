@@ -58,8 +58,8 @@ case class ResDb(context: Context) extends SQLiteOpenHelper(context, ResDb.Name,
       db.insert("regForm", null, cv)
     }
 
-    def deleteById(id : String) : Unit = {
-      db.delete("regForm", "id = ?", null)
+    def deleteByRegForm(regForm: RegForm) : Unit = {
+      db.delete("regForm", "firstname = ? and secondname= ? and gebDatum = ?",  Array(regForm.person.firstName,regForm.person.secondName,regForm.person.gebDatum))
     }
 
     def update(r : RegForm) : Unit = {
@@ -135,6 +135,7 @@ case class ResDb(context: Context) extends SQLiteOpenHelper(context, ResDb.Name,
         }
       } finally {
         cursorRegForm foreach (_.close())
+
       }
 
     }

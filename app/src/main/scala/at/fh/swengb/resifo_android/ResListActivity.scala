@@ -39,7 +39,9 @@ class ResListActivity extends ListActivity  {
 
     bundle.putSerializable("intentRegForm",p)
     intent.putExtra("bundleRegForm",bundle)
+    finish();
     startActivity(intent)
+
 
   }
 

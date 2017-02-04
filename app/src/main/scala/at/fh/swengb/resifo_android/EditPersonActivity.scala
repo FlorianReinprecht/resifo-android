@@ -9,12 +9,14 @@ import android.widget.{EditText, TextView}
 
 class EditPersonActivity extends AppCompatActivity {
   var aDb: ResDb = _
+  var regForm:RegForm = _
   override protected def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_edit_person)
+    aDb = ResDb(getApplicationContext)
 
     val intent: Intent = getIntent();
-    val regForm :RegForm = intent.getExtras().getBundle("bundleRegForm").getSerializable("intentRegForm").asInstanceOf[RegForm]
+    regForm = intent.getExtras().getBundle("bundleRegForm").getSerializable("intentRegForm").asInstanceOf[RegForm]
 
     val viewPersonAnrede: TextView = findViewById(R.id.textView_personAnrede).asInstanceOf[TextView]
     viewPersonAnrede.setText("Anrede: "+ regForm.person.anrede)
@@ -93,12 +95,17 @@ class EditPersonActivity extends AppCompatActivity {
 
   }
 
- /*
-  def saveObject(view: View): Unit = {
-    val zusammenfassung: String = findViewById(R.id.textView_zusammenfassung).asInstanceOf[EditText].getText.toString
+
+  def deleteRegForm(view: View): Unit = {
+
+      aDb.mkRegFormTable().deleteByRegForm(regForm)
+
+      val i = new Intent(this, classOf[ResListActivity])
+      startActivity(i)
+
 
   }
-  */
+
 
 
 

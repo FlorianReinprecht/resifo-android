@@ -60,7 +60,7 @@ class Formular05Activity extends AppCompatActivity {
     val hausnummer: String = findViewById(R.id.editText_hausnummer).asInstanceOf[EditText].getText.toString
     val stiege: String = findViewById(R.id.editText_stiege).asInstanceOf[EditText].getText.toString
     val anmUnterkunft: AnmUnterkunft = AnmUnterkunft(land, plz, ort, straße, tuer, hausnummer, stiege)
-    if( land.toString().trim().equals("") || plz.toString().trim().equals("") || ort.toString().trim().equals("") || straße.toString().trim().equals("") || tuer.toString().trim().equals("") || hausnummer.toString().trim().equals("") || stiege.toString().trim().equals("")){
+    if( land.toString().trim().equals("") || plz.toString().trim().equals("") || ort.toString().trim().equals("") || straße.toString().trim().equals("")  || hausnummer.toString().trim().equals("") ){
       Toast.makeText(getApplicationContext, "Alle Pflichtfelder müssen ausgefüllt werden!", Toast.LENGTH_SHORT).show()
     }
     else{
