@@ -139,24 +139,6 @@
                     android:layout_weight="1" />
             </LinearLayout>
 
-            <Button
-                    android:text="Load"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button_load"
-                    android:background="#b01817"
-                    android:textColor="#ffffff"
-                    android:onClick="loadFromDb" />
-
-                <Button
-                    android:text="Save"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button_save"
-                    android:background="#b01817"
-                    android:textColor="#ffffff"
-                    android:onClick="saveToDb" />
-
 
             <Button
                 android:text="Weiter"
