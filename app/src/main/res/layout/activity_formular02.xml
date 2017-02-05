@@ -11,19 +11,6 @@
     tools:context="at.fh.swengb.resifo_android.Formular02Activity">
 
 
-    <TextView
-        android:text="Kennen Sie Ihre ZMR-Zahl?"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_alignParentTop="true"
-        android:layout_toStartOf="@+id/button_weiter"
-        android:layout_alignParentEnd="true"
-        android:textSize="40sp"
-        android:textAlignment="center"
-        android:id="@+id/textView_zmrYN" />
-
-
     <Button
         android:text="Zurück"
         android:layout_width="wrap_content"
@@ -49,17 +36,6 @@
         android:indeterminate="false" />
 
     <Button
-        android:text="JA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_ja"
-        android:textAlignment="center"
-        android:onClick="zmrYes"
-        android:layout_marginStart="57dp"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
         android:text="NEIN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,6 +46,28 @@
         android:layout_alignBaseline="@+id/button_ja"
         android:layout_alignBottom="@+id/button_ja"
         android:layout_toEndOf="@+id/button_ja" />
+
+    <Button
+        android:text="JA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_ja"
+        android:textAlignment="center"
+        android:onClick="zmrYes"
+        android:layout_marginStart="60dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Kennen Sie Ihre ZMR-Zahl?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        android:id="@+id/textView_zmrYN"
+        android:layout_above="@+id/button_nein"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="54dp" />
 
 
 </RelativeLayout>

@@ -41,7 +41,7 @@ class Formular01Activity extends AppCompatActivity {
     nextView.putExtra("bundleFormular01Activity",bundle)
 
     if( anrede.toString().trim().equals("") || firstName.toString().trim().equals("") || secondName.toString().trim().equals("") || gebDatum.toString().trim().equals("") || gebOrt.toString().trim().equals("") || famStand.toString().trim().equals("") || religion.toString().trim().equals("") || staat.toString().trim().equals("") ){
-      Toast.makeText(getApplicationContext, "Alle Pflichtfelder müssen ausgefüllt werden!", Toast.LENGTH_SHORT).show()
+      Toast.makeText(getApplicationContext, "Bitte alle Pflichtfelder ausfüllen!", Toast.LENGTH_SHORT).show()
     }
     else{
       startActivity(nextView);

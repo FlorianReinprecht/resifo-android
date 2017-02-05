@@ -54,7 +54,7 @@ class Formular11Activity extends AppCompatActivity {
     println(regForm)
 
     if( nachname.toString().trim().equals("") || vorname.toString().trim().equals("") || datum.toString().trim().equals("")){
-      Toast.makeText(getApplicationContext, "Alle Pflichtfelder müssen ausgefüllt werden!", Toast.LENGTH_SHORT).show()
+      Toast.makeText(getApplicationContext, "Bitte alle Pflichtfelder ausfüllen!", Toast.LENGTH_SHORT).show()
     }
     else{
       startActivity(prevView);

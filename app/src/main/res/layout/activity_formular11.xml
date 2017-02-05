@@ -12,20 +12,20 @@
 
 
     <TextView
-        android:text="Geben Sie die Daten Ihres Unterkunftgebers an:"
+        android:text="Bitte geben Sie die Daten Ihres Unterkunftgebers an:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:layout_alignParentTop="true"
         android:layout_toStartOf="@+id/button_weiter"
         android:layout_alignParentEnd="true"
-        android:textSize="30sp"
+        android:textSize="27sp"
         android:textAlignment="viewStart" />
 
 
     <Button
         android:text="Verwerfen"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:id="@+id/button_zurueck"
         android:background="#b01817"
@@ -46,18 +46,6 @@
         android:max="88"
         android:progress="80"
         android:indeterminate="false" />
-
-    <Button
-        android:text="Speichern"
-        android:layout_width="102dp"
-        android:layout_height="wrap_content"
-        android:background="#b01817"
-        android:textColor="#ffffff"
-        android:id="@+id/button_weiter"
-        android:contextClickable="false"
-        android:layout_above="@+id/progressBar"
-        android:layout_alignParentEnd="true"
-        android:onClick="saveData" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -88,5 +76,17 @@
         android:hint="Vorname"
         android:layout_below="@+id/editText_nachname"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Speichern"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="#b01817"
+        android:textColor="#ffffff"
+        android:id="@+id/button_weiter"
+        android:contextClickable="false"
+        android:onClick="saveData"
+        android:layout_above="@+id/progressBar"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

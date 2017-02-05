@@ -22,13 +22,14 @@
             android:orientation="vertical" >
 
             <TextView
-                android:text="Persönliche Daten"
+                android:text="Persönliche Daten:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView2"
                 android:textSize="18sp"
                 android:paddingBottom="10dp"
-                tools:text="Persönliche Daten" />
+                tools:text="Persönliche Daten:"
+                android:textStyle="normal|bold" />
 
             <TextView
                 android:text="Anrede:"
@@ -38,11 +39,11 @@
                 tools:text="Anrede:" />
 
             <TextView
-                android:text="Familienname VOR:"
+                android:text="Familienname VOR erster Ehe:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_familiennameVor"
-                tools:text="Familienname VOR:" />
+                tools:text="Familienname VOR erster Ehe:" />
 
             <TextView
                 android:text="Name:"
@@ -80,21 +81,22 @@
                 tools:text="Staatsangehörigkeit:" />
 
             <TextView
-                android:text="ZMR-Zahl"
+                android:text="ZMR-Zahl:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_zmrZahl"
-                tools:text="ZMR-Zahl" />
+                tools:text="ZMR-Zahl:" />
 
             <TextView
-                android:text="Reisedokument bei Fremden"
+                android:text="Reisedokument (bei Fremden):"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView12"
                 android:textSize="18sp"
                 android:paddingBottom="10dp"
                 android:paddingTop="20dp"
-                tools:text="Reisedokument bei Fremden" />
+                tools:text="Reisedokument (bei Fremden):"
+                android:textStyle="normal|bold" />
 
             <TextView
                 android:text="Art:"
@@ -118,11 +120,11 @@
                 tools:text="Ausstellungsdatum:" />
 
             <TextView
-                android:text="Ausstellende Behörde"
+                android:text="Ausstellende Behörde:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_ausstellendeBehoerde"
-                tools:text="Ausstellende Behörde" />
+                tools:text="Ausstellende Behörde:" />
 
             <TextView
                 android:text="Anmeldung der Unterkunft in:"
@@ -132,7 +134,8 @@
                 android:textSize="18sp"
                 android:paddingTop="20dp"
                 android:paddingBottom="10dp"
-                tools:text="Anmeldung der Unterkunft in:" />
+                tools:text="Anmeldung der Unterkunft in:"
+                android:textStyle="normal|bold" />
 
             <TextView
                 android:text="Adresse:"
@@ -163,7 +166,8 @@
                 android:textSize="18sp"
                 android:paddingBottom="10dp"
                 android:paddingTop="20dp"
-                tools:text="Hauptwohnsitz bleibt in:" />
+                tools:text="Hauptwohnsitz bleibt in:"
+                android:textStyle="normal|bold" />
 
             <TextView
                 android:text="Adresse:"
@@ -180,11 +184,11 @@
                 tools:text="PLZ, Ort:" />
 
             <TextView
-                android:text="Ziehen Sie aus dem Ausland?"
+                android:text="Zuzug aus dem Ausland?"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_zuzug"
-                tools:text="Ziehen Sie aus dem Ausland?" />
+                tools:text="Zuzug aus dem Ausland?" />
 
             <TextView
                 android:text="Abmeldung der Unterkunft in:"
@@ -194,7 +198,8 @@
                 android:textSize="18sp"
                 android:paddingBottom="10dp"
                 android:paddingTop="20dp"
-                tools:text="Abmeldung der Unterkunft in:" />
+                tools:text="Abmeldung der Unterkunft in:"
+                android:textStyle="normal|bold" />
 
             <TextView
                 android:text="Adresse:"
@@ -226,7 +231,8 @@
                 android:textSize="18sp"
                 android:paddingBottom="10dp"
                 android:paddingTop="20dp"
-                tools:text="Unterkunftgeber:" />
+                tools:text="Unterkunftgeber:"
+                android:textStyle="normal|bold" />
 
             <TextView
                 android:text="Nachname:"
@@ -259,7 +265,8 @@
                 android:layout_above="@+id/progressBar"
                 android:layout_alignParentStart="true"
                 android:layout_marginTop="20dp"
-                android:onClick="deleteRegForm" />
+                android:onClick="deleteRegForm"
+                android:layout_marginRight="10dp" />
 
         </LinearLayout>
     </ScrollView>

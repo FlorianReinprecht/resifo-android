@@ -52,7 +52,7 @@ class EditPersonActivity extends AppCompatActivity {
     viewAusstellungsdatum.setText("Ausstellungsdatum: "+regForm.reisepass.ausstellungsdatum)
 
     val viewAusstellendeBehoerde: TextView = findViewById(R.id.textView_ausstellendeBehoerde).asInstanceOf[TextView]
-    viewAusstellendeBehoerde.setText("Ausstellende Behörde :"+regForm.reisepass.behoerde)
+    viewAusstellendeBehoerde.setText("Ausstellende Behörde: "+regForm.reisepass.behoerde)
 
     val viewAnmStrasse: TextView = findViewById(R.id.textView_anmStrasse).asInstanceOf[TextView]
     viewAnmStrasse.setText("Adresse: "+ regForm.anmUnterkunft.straße + " " + regForm.anmUnterkunft.hausnummer + "/" + regForm.anmUnterkunft.stiege + "/" + regForm.anmUnterkunft.tuer )

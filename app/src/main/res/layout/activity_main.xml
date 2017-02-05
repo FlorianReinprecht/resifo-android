@@ -33,7 +33,8 @@
         android:id="@+id/progressBar"
         android:layout_alignParentEnd="true"
         android:max="100"
-        android:progress="100" />
+        android:progress="100"
+        android:visibility="invisible" />
 
 
     <ImageView

@@ -2,27 +2,30 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="at.fh.swengb.resifo_android">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Meldezettel Österreich"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".SelectActivity" />
+        <activity android:name=".InformationActivity" />
         <activity android:name=".EditPersonActivity" />
         <activity android:name=".Formular01Activity" />
         <activity android:name=".Formular02Activity" />
         <activity android:name=".Formular03Activity" />
         <activity android:name=".Formular04Activity" />
         <activity android:name=".Formular05Activity" />
-        <activity android:name=".InformationActivity" />
         <activity android:name=".Formular06Activity" />
         <activity android:name=".Formular07Activity" />
         <activity android:name=".Formular08Activity" />
@@ -31,8 +34,6 @@
         <activity android:name=".Formular11Activity" />
         <activity android:name=".Formular12Activity" />
         <activity android:name=".ResListActivity" />
-        <activity android:name=".TestActivity" />
-        <activity android:name=".test"></activity>
     </application>
 
 </manifest>

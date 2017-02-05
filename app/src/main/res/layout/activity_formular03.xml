@@ -47,11 +47,11 @@
         android:indeterminate="false" />
 
     <TextView
-        android:text="Geben Sie bitte Ihre zwölfstellige ZMR-Zahl ein:"
+        android:text="Bitte geben Sie Ihre zwölfstellige ZMR-Zahl ein:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
-        android:textSize="24sp"
+        android:textSize="26sp"
         android:textAlignment="center"
         android:id="@+id/textView_zmr"
         android:layout_alignParentTop="true"

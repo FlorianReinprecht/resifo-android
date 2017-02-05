@@ -43,7 +43,7 @@ class Formular06Activity extends AppCompatActivity {
 
     nextView.putExtra("bundleFormular06Activity", bundle)
     if( land.toString().trim().equals("") || plz.toString().trim().equals("") || ort.toString().trim().equals("") || straße.toString().trim().equals("") || hausnummer.toString().trim().equals("")){
-      Toast.makeText(getApplicationContext, "Alle Pflichtfelder müssen ausgefüllt werden!", Toast.LENGTH_SHORT).show()
+      Toast.makeText(getApplicationContext, "Bitte alle Pflichtfelder ausfüllen!", Toast.LENGTH_SHORT).show()
     }
     else{
       startActivity(nextView);

@@ -44,7 +44,7 @@ class Formular04Activity extends AppCompatActivity {
     bundle.putSerializable("intentFormular04Activity_reisepass", reisepass)
     nextView.putExtra("bundleFormular04Activity", bundle)
     if( docart.toString().trim().equals("") || docNr.toString().trim().equals("") || ausstellungsdatum.toString().trim().equals("") || behoerde.toString().trim().equals("") || reisepass.toString().trim().equals("")){
-      Toast.makeText(getApplicationContext, "Alle Pflichtfelder müssen ausgefüllt werden!", Toast.LENGTH_SHORT).show()
+      Toast.makeText(getApplicationContext, "Bitte alle Pflichtfelder ausfüllen!", Toast.LENGTH_SHORT).show()
     }
     else{
       startActivity(nextView);

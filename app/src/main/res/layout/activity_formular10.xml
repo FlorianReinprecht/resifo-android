@@ -10,11 +10,22 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="at.fh.swengb.resifo_android.EditPersonActivity">
 
+    <TextView
+        android:text="Überprüfen Sie Ihre Eingabe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_eingabepruefung"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:textStyle="normal|bold" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true">
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,13 +33,14 @@
             android:orientation="vertical" >
 
             <TextView
-                android:text="Persönliche Daten"
+                android:text="Persönliche Daten:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView2"
                 android:textSize="18sp"
                 android:paddingBottom="10dp"
-                tools:text="Persönliche Daten" />
+                tools:text="Persönliche Daten:"
+                android:textStyle="normal|bold" />
 
             <TextView
                 android:text="Anrede:"
@@ -38,11 +50,11 @@
                 tools:text="Anrede:" />
 
             <TextView
-                android:text="Familienname VOR:"
+                android:text="Familienname VOR erster Ehe:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_familiennameVor"
-                tools:text="Familienname VOR:" />
+                tools:text="Familienname VOR erster Ehe:" />
 
             <TextView
                 android:text="Name:"
@@ -80,21 +92,22 @@
                 tools:text="Staatsangehörigkeit:" />
 
             <TextView
-                android:text="ZMR-Zahl"
+                android:text="ZMR-Zahl:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_zmrZahl"
-                tools:text="ZMR-Zahl" />
+                tools:text="ZMR-Zahl:" />
 
             <TextView
-                android:text="Reisedokument bei Fremden"
+                android:text="Reisedokument (bei Fremden):"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView12"
                 android:textSize="18sp"
                 android:paddingBottom="10dp"
                 android:paddingTop="20dp"
-                tools:text="Reisedokument bei Fremden" />
+                tools:text="Reisedokument (bei Fremden):"
+                android:textStyle="normal|bold" />
 
             <TextView
                 android:text="Art:"
@@ -118,11 +131,11 @@
                 tools:text="Ausstellungsdatum:" />
 
             <TextView
-                android:text="Ausstellende Behörde"
+                android:text="Ausstellende Behörde:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_ausstellendeBehoerde"
-                tools:text="Ausstellende Behörde" />
+                tools:text="Ausstellende Behörde:" />
 
             <TextView
                 android:text="Anmeldung der Unterkunft in:"
@@ -132,7 +145,8 @@
                 android:textSize="18sp"
                 android:paddingTop="20dp"
                 android:paddingBottom="10dp"
-                tools:text="Anmeldung der Unterkunft in:" />
+                tools:text="Anmeldung der Unterkunft in:"
+                android:textStyle="normal|bold" />
 
             <TextView
                 android:text="Adresse:"
@@ -163,7 +177,8 @@
                 android:textSize="18sp"
                 android:paddingBottom="10dp"
                 android:paddingTop="20dp"
-                tools:text="Hauptwohnsitz bleibt in:" />
+                tools:text="Hauptwohnsitz bleibt in:"
+                android:textStyle="normal|bold" />
 
             <TextView
                 android:text="Adresse:"
@@ -180,11 +195,11 @@
                 tools:text="PLZ, Ort:" />
 
             <TextView
-                android:text="Ziehen Sie aus dem Ausland?"
+                android:text="Zuzug aus dem Ausland?"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_zuzug"
-                tools:text="Ziehen Sie aus dem Ausland?" />
+                tools:text="Zuzug aus dem Ausland?" />
 
             <TextView
                 android:text="Abmeldung der Unterkunft in:"
@@ -194,7 +209,8 @@
                 android:textSize="18sp"
                 android:paddingBottom="10dp"
                 android:paddingTop="20dp"
-                tools:text="Abmeldung der Unterkunft in:" />
+                tools:text="Abmeldung der Unterkunft in:"
+                android:textStyle="normal|bold" />
 
             <TextView
                 android:text="Adresse:"
@@ -218,11 +234,9 @@
                 android:id="@+id/textView_verzug"
                 tools:text="Verziehen Sie ins Ausland?" />
 
-            <LinearLayout
-                android:orientation="vertical"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.17">
+                android:layout_height="match_parent">
 
                 <Button
                     android:text="Zurück"
@@ -231,32 +245,36 @@
                     android:background="#b01817"
                     android:textColor="#ffffff"
                     android:id="@+id/button_zurueck"
-                    android:layout_above="@+id/progressBar"
                     android:layout_alignParentStart="true"
-                    android:onClick="Prev" />
+                    android:onClick="Prev"
+                    android:layout_marginTop="30dp" />
 
                 <Button
-                    android:text="JA"
+                    android:text="WEITER"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/button_weiter"
-                    android:layout_above="@+id/progressBar"
                     android:layout_alignParentEnd="true"
-                    android:onClick="getNext" />
+                    android:onClick="getNext"
+                    android:textAlignment="center"
+                    android:background="@color/colorAccent"
+                    android:textColor="#FFFFFF"
+                    android:layout_alignTop="@+id/button_zurueck"
+                    android:layout_marginRight="10dp" />
+            </RelativeLayout>
 
-                <ProgressBar
-                    style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:id="@+id/progressBar"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentStart="true"
-                    android:visibility="visible"
-                    android:max="88"
-                    android:progress="72"
-                    android:indeterminate="false" />
-            </LinearLayout>
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/progressBar"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:visibility="visible"
+                android:max="88"
+                android:progress="72"
+                android:indeterminate="false" />
 
 
         </LinearLayout>

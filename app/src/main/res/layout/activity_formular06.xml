@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_formular06"
     android:layout_width="match_parent"
@@ -13,9 +14,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/relativeLayout"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/relativeLayout">
+        android:layout_alignParentStart="true">
 
         <TextView
             android:text="Abmeldung der Unterkunft in:"
@@ -37,7 +38,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginTop="120dp"
             android:id="@+id/editText_land"
-            android:hint="Land:" />
+            android:hint="Land" />
 
 
 
@@ -49,7 +50,7 @@
             android:id="@+id/editText_plz"
             android:layout_below="@+id/editText_land"
             android:layout_alignParentStart="true"
-            android:hint="PLZ:"
+            android:hint="PLZ"
             android:layout_toStartOf="@+id/editText_ort" />
 
         <EditText
@@ -60,43 +61,7 @@
             android:layout_below="@+id/editText_plz"
             android:layout_alignParentStart="true"
             android:id="@+id/editText_straße"
-            android:hint="Straße:" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/editText_tuer"
-            android:layout_below="@+id/editText_straße"
-            android:layout_alignParentStart="true"
-            android:layout_toStartOf="@+id/button_nein"
-            android:layout_alignEnd="@+id/button_zurueck"
-            android:hint="Türnr.:"
-            android:width="100dp" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/editText_stiege"
-            android:hint="Stiege:"
-            android:layout_below="@+id/editText_straße"
-            android:layout_alignParentEnd="true"
-            android:layout_toEndOf="@+id/button_nein"
-            android:width="100dp" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/editText_hausnummer"
-            android:hint="Hausnr.:"
-            android:width="100dp"
-            android:layout_below="@+id/editText_straße"
-            android:layout_centerHorizontal="true" />
+            android:hint="Straße" />
 
         <Button
             android:text="Zurück"
@@ -130,7 +95,7 @@
             android:layout_alignParentStart="true"
             android:visibility="visible"
             android:max="88"
-            android:progress="40"
+            android:progress="56"
             android:indeterminate="false" />
 
         <EditText
@@ -139,9 +104,59 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/editText_ort"
-            android:hint="Ort:"
+            android:hint="Ort"
             android:layout_below="@+id/editText_land"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/editText_hausnummer"
+            android:layout_alignStart="@+id/editText_stiege" />
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_location60"
+            android:id="@+id/imageButton_standort"
+            android:adjustViewBounds="true"
+            android:layout_above="@+id/editText_ort"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText_hausnummer"
+            android:hint="HausNr."
+            android:width="100dp"
+            android:layout_alignBaseline="@+id/editText_tuer"
+            android:layout_alignBottom="@+id/editText_tuer"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/button_zurueck" />
+
+        <EditText
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText_stiege"
+            android:hint="Stiege"
+            android:width="80dp"
+            android:layout_below="@+id/editText_straße"
+            android:layout_marginLeft="40dp"
+            android:layout_toEndOf="@+id/editText_hausnummer" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText_tuer"
+            android:hint="TürNr."
+            android:width="100dp"
+            android:layout_alignBottom="@+id/editText_stiege"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/editText_stiege"
+            android:layout_marginLeft="40dp" />
 
     </RelativeLayout>
 
