@@ -11,7 +11,11 @@ Diese App wurde im Rahmen eines Studienprojekts der Lehrveranstaltung "Software 
 6. [Lizenz](#lizenz)
 
 ## Beschreibung
-Es handelt sich um eine Android App, bei der das Meldezettel-Formular des Landes Österreich ausgefüllt und gespeichert werden kann. Der Fokus liegt auf einem simplen Design, einer übersichtlichen Bedienung und einem sinnvollen Funktionsumfang. Es besteht die Möglichkeit, mehrere unterschiedliche Formulare abzuspeichern, zu löschen und deren Details bei Bedarf zu betrachten.
+Es handelt sich um eine Android App, bei der das [Meldezettel-Formular](http://www.graz.at/cms/dokumente/10024916/e05a999a/Meldezettel.pdf) des Landes Österreich ausgefüllt und gespeichert werden kann. Der Fokus liegt auf einem simplen Design, einer übersichtlichen Bedienung und einem sinnvollen Funktionsumfang. Es besteht die Möglichkeit, mehrere unterschiedliche Formulare abzuspeichern, deren Details bei Bedarf zu betrachten und zuvor gespeicherte Datensätze zu löschen.
+
+| Startbildschirm | Eintragung der Daten | Übersicht der Datensätze |
+|:-------------:|:-------------:|:-----:|
+| ![Startbildschirm](/images/welcomescreen.png "Startbildschirm") | ![Eintragung der Daten](/images/persdata.png "Eintragung der Daten") | ![Datenübersicht](/images/dataoverview.png "Datenübersicht") |
 
 ## Voraussetzungen
 Diese App wurde für Android 5.1 "Lollipop" (API Level 22) und höher entwickelt. Auf niedrigeren Android Versionen könnte es zu Fehlern bei der Ausführung kommen.
