@@ -22,7 +22,7 @@ class EditPersonActivity extends AppCompatActivity {
     viewPersonAnrede.setText("Anrede: "+ regForm.person.anrede)
 
     val viewFamiliennameVor: TextView = findViewById(R.id.textView_familiennameVor).asInstanceOf[TextView]
-    viewFamiliennameVor.setText("Familienname vor der ersten Ehe: "+regForm.person.famnameVor)
+    viewFamiliennameVor.setText("Familienname VOR erster Ehe: "+regForm.person.famnameVor)
 
     val viewName: TextView = findViewById(R.id.textView_name).asInstanceOf[TextView]
     viewName.setText("Name: "+regForm.person.firstName+ " "+regForm.person.secondName)
@@ -52,7 +52,7 @@ class EditPersonActivity extends AppCompatActivity {
     viewAusstellungsdatum.setText("Ausstellungsdatum: "+regForm.reisepass.ausstellungsdatum)
 
     val viewAusstellendeBehoerde: TextView = findViewById(R.id.textView_ausstellendeBehoerde).asInstanceOf[TextView]
-    viewAusstellendeBehoerde.setText("Ausstellende Behörde: "+regForm.reisepass.behoerde)
+    viewAusstellendeBehoerde.setText("ausstellende Behörde: "+regForm.reisepass.behoerde)
 
     val viewAnmStrasse: TextView = findViewById(R.id.textView_anmStrasse).asInstanceOf[TextView]
     viewAnmStrasse.setText("Adresse: "+ regForm.anmUnterkunft.straße + " " + regForm.anmUnterkunft.hausnummer + "/" + regForm.anmUnterkunft.stiege + "/" + regForm.anmUnterkunft.tuer )
