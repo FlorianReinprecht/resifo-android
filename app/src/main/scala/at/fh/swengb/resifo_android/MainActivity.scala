@@ -8,9 +8,12 @@ import android.widget.AdapterView
 
 /* === TO-DO LIST ===
 
-- Ablauflogik klaeren!
-- Alle Datumsfelder & PLZ Felder beschränken!
-- Google Maps
+- Code mit Kommentaren versehen!!!
+- Ablauflogik der einzelnen Screens klaeren + Fortschrittsbalken anpassen
+- Felder bei Reisedokumente optional machen
+- Alle Datumsfelder & PLZ Felder auf korrekte Eingaben beschränken
+- Back-Button nach dem Loeschen eines Datensatzes ueberdenken (zeigt geloeschten Datensatz en, keine Moeglichkeit, um zum Startbildschirm zu kommen!)
+- Google Maps Adresse auslesen (long/lat fixen, in Adresse umwandeln & wohl mit setText in die Felder einfuegen)
 
  */
 
@@ -21,8 +24,6 @@ class MainActivity extends AppCompatActivity{
     setContentView(R.layout.activity_main)
   }
 //  println(RegForm(Person("Herr", "Florian", "Reinprecht","10.12.1994","Feldbach","ledig","Österreich")))
-
-
 
 
   def gotoFirstActivity(view: View):Unit = {

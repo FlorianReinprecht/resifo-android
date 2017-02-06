@@ -138,7 +138,8 @@
             android:adjustViewBounds="true"
             android:layout_above="@+id/editText_ort"
             android:layout_alignParentEnd="true"
-            android:background="@android:color/transparent" />
+            android:background="@android:color/transparent"
+            android:onClick="onResume" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -178,6 +179,16 @@
             android:layout_alignParentEnd="true"
             android:layout_marginLeft="40dp"
             android:layout_toEndOf="@+id/editText_stiege" />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:id="@+id/tvAddress"
+            android:layout_alignBaseline="@+id/button_zurueck"
+            android:layout_alignBottom="@+id/button_zurueck"
+            android:layout_alignParentEnd="true"
+            android:background="@color/common_google_signin_btn_text_light_disabled"
+            android:visibility="invisible" />
 
     </RelativeLayout>
 

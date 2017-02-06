@@ -66,7 +66,7 @@
                 android:inputType="textPersonName"
                 android:ems="10"
                 android:id="@+id/editText_famnameVor"
-                android:hint="Familienname vor der ersten Ehe" />
+                android:hint="Familienname vor erster Ehe" />
 
             <EditText
                 android:layout_width="match_parent"
