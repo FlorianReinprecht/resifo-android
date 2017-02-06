@@ -1,10 +1,44 @@
-Person;Datum;Stunden;Beschreibung
-ahaxha;20161219;2;erstes Team-Meeting
-akrejan;20161219;2;erstes Team-Meeting
-dkrueger;20161219;2;erstes Team-Meeting
-freinprecht;20161219;2;erstes Team-Meeting
-ahaxha;20161223;6;Prototyp Layout
-freinprecht;20161223;3;README- & LICENSE- & team-Dateien
-ahaxha;20161223;3;proposal-Datei
-akrejan;20161223;2;proposal-Datei
-freinprecht;20161223;1;proposal-Datei
+Person,Datum,Stunden,Beschreibung
+
+ahaxha,20161219,2,erstes Team-Meeting
+akrejan,20161219,2,erstes Team-Meeting
+dkrueger,20161219,2,erstes Team-Meeting
+freinprecht,20161219,2,erstes Team-Meeting
+
+ahaxha,20161223,6,Prototyp Layout
+freinprecht,20161223,3,README.md & LICENSE.txt & team.md
+ahaxha,20161223,3,proposal.md
+akrejan,20161223,2,proposal.md
+freinprecht,20161223,1,proposal.md
+
+ahaxha,20170103,3,Design & Programmierung
+akrejan,20170103,3,Design & Programmierung
+
+ahaxha,20170105,6,Design & Programmierung
+akrejan,20170105,6,Design & Programmierung
+dkrueger,20170105,6,Datenbank & Programmierung
+freinprecht,20170105,6,Datenbank & Programmierung
+
+ahaxha,20170120,1,Design & Programmierung
+akrejan,20170120,4,Design & Programmierung
+freinprecht,20170120,1,Datenbank & Programmierung
+
+ahaxha,20170125,3,Design & Programmierung
+dkrueger,20170125,3,Datenbank & Programmierung
+freinprecht,20170125,3,Datenbank & Programmierung
+
+ahaxha,20170202,4,Design & Programmierung
+akrejan,20170202,3,Design & Programmierung
+dkrueger,20170202,3,Design & Programmierung
+freinprecht,20170202,3,Datenbank & Programmierung
+
+ahaxha,20170203,9,Design & Programmierung & Testing
+akrejan,20170203,7,Dokumentation/README.md & postmortem.md & Testing
+dkrueger,20170203,10,Design & Programmierung & Testing
+freinprecht,20170203,10,Datenbank & Programmierung & Testing
+
+ahaxha,20170204,5,Design & Programmierung
+akrejan,20170204,9,Design & Programmierung
+freinprecht,20170204,3,Datenbank & Programmierung
+
+akrejan,20170205,10,Design & Programmierung & Dokumentation/README.md & timesheet.csv
